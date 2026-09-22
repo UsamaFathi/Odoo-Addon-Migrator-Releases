@@ -1,0 +1,1 @@
+# Odoo-Addon-Migrator-Releases
