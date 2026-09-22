@@ -1,0 +1,93 @@
+name: Publish v1.0.0-rc.2 binaries
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.event.head_commit.message == 'chore: publish v1.0.0-rc.2 binaries'
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      WIN_PORTABLE_URL: "https://sdmntprwestus.oaiusercontent.com/files/00000000-72a0-8230-9a30-d6ba93bbd252/raw?se=2026-09-22T10%3A06%3A54Z&sp=r&sv=2026-02-06&sr=b&scid=7830310a-b759-5000-ad08-7a845107df70&skoid=9b41a688-1b44-4731-856e-b0efcf3660ed&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-22T06%3A53%3A50Z&ske=2026-09-23T06%3A53%3A50Z&sks=b&skv=2026-02-06&sig=AdZ1ZG%2BCFv9PnPbX2lc6aXEmAOlfyhk6D4V2I502Fec%3D"
+      WIN_INSTALLER_URL: "https://sdmntprnortheu.oaiusercontent.com/files/00000000-372c-81f4-880e-768b49192388/raw?se=2026-09-22T10%3A06%3A58Z&sp=r&sv=2026-02-06&sr=b&scid=5b9f9200-fdd3-58c1-a06e-b10407d9f778&skoid=9b41a688-1b44-4731-856e-b0efcf3660ed&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-22T06%3A05%3A42Z&ske=2026-09-23T06%3A05%3A42Z&sks=b&skv=2026-02-06&sig=eOlnfaEaFazEEKKC0278v2VAb9EOO2WZWv4LIVzVVL4%3D"
+      UBUNTU_DEB_URL: "https://sdmntprcentralus.oaiusercontent.com/files/00000000-7ed8-81f5-ae51-421aa6e16973/raw?se=2026-09-22T10%3A07%3A08Z&sp=r&sv=2026-02-06&sr=b&scid=f957444f-eaa0-5b7a-b732-379f23fd2584&skoid=9b41a688-1b44-4731-856e-b0efcf3660ed&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-21T23%3A27%3A32Z&ske=2026-09-22T23%3A27%3A32Z&sks=b&skv=2026-02-06&sig=a2n1F0o/dgt5MbEyr6FwPabSaTXq74P0yEOvLYG/Ouc%3D"
+      UBUNTU_PORTABLE_URL: "https://sdmntprnortheu.oaiusercontent.com/files/00000000-dd90-81f4-b448-75ade848cf04/raw?se=2026-09-22T10%3A07%3A18Z&sp=r&sv=2026-02-06&sr=b&scid=391d8e09-4e98-50d8-98c5-03d8bb43fc7e&skoid=9b41a688-1b44-4731-856e-b0efcf3660ed&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-22T04%3A49%3A18Z&ske=2026-09-23T04%3A49%3A18Z&sks=b&skv=2026-02-06&sig=2fyrchZnOpFlECwtkxWp4r/Mx%2BEHJ42JSetkKvGWaWw%3D"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download validated build artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-assets work/installer work/deb work/ubuntu
+
+          curl -fL --retry 3 "$WIN_PORTABLE_URL" -o release-assets/OdooAddonMigrator-Windows.zip
+          curl -fL --retry 3 "$WIN_INSTALLER_URL" -o work/installer.zip
+          curl -fL --retry 3 "$UBUNTU_DEB_URL" -o work/ubuntu-deb.zip
+          curl -fL --retry 3 "$UBUNTU_PORTABLE_URL" -o work/ubuntu-portable.zip
+
+          unzip -q work/installer.zip -d work/installer
+          unzip -q work/ubuntu-deb.zip -d work/deb
+          unzip -q work/ubuntu-portable.zip -d work/ubuntu
+
+          cp work/installer/OdooAddonMigrator_Setup.exe release-assets/
+          cp work/deb/OdooAddonMigrator_1.0.0-rc.2_amd64.deb release-assets/
+          cp work/ubuntu/OdooAddonMigrator-Ubuntu-x86_64.tar.gz release-assets/
+
+          test -s release-assets/OdooAddonMigrator-Windows.zip
+          test -s release-assets/OdooAddonMigrator_Setup.exe
+          test -s release-assets/OdooAddonMigrator_1.0.0-rc.2_amd64.deb
+          test -s release-assets/OdooAddonMigrator-Ubuntu-x86_64.tar.gz
+
+          sha256sum release-assets/* | tee release-assets/SHA256SUMS.txt
+
+      - name: Publish public release
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if gh release view v1.0.0-rc.2 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release already exists."
+            exit 0
+          fi
+
+          cat > release-notes.md <<'EOF'
+          ## Odoo Addon Migrator v1.0.0-rc.2
+
+          Public binary release candidate for Windows and Ubuntu x86_64.
+
+          ### Windows
+          - **OdooAddonMigrator_Setup.exe** — recommended installer.
+          - **OdooAddonMigrator-Windows.zip** — portable build.
+
+          ### Ubuntu x86_64
+          - **OdooAddonMigrator_1.0.0-rc.2_amd64.deb** — recommended Ubuntu/Debian package.
+          - **OdooAddonMigrator-Ubuntu-x86_64.tar.gz** — portable build.
+
+          ### RC2 highlights
+          - Redesigned desktop interface.
+          - Fixed desktop settings/test-path leakage.
+          - Added **Local Exact Source** support per Odoo version.
+          - Mix local Odoo sources with verified official snapshots.
+          - Local source trees are read-only and are never modified.
+          - Windows installer and portable builds validated in CI.
+          - Ubuntu portable and .deb builds validated by build, install, smoke test, and uninstall on Ubuntu 22.04.
+          - Includes SHA-256 checksums for all release files.
+
+          ### Important
+          This is a **release candidate**. Static validation does not guarantee runtime or production compatibility. Always install and test migrated addons on the target Odoo version before production use.
+
+          Windows binaries are currently unsigned and may trigger Microsoft SmartScreen.
+
+          This repository distributes binaries only. The source repository is maintained privately.
+
+          Independent migration utility. Not affiliated with Odoo S.A.
+          EOF
+
+          gh release create v1.0.0-rc.2             release-assets/OdooAddonMigrator_Setup.exe             release-assets/OdooAddonMigrator-Windows.zip             release-assets/OdooAddonMigrator_1.0.0-rc.2_amd64.deb             release-assets/OdooAddonMigrator-Ubuntu-x86_64.tar.gz             release-assets/SHA256SUMS.txt             --repo "$GITHUB_REPOSITORY"             --target main             --title "Odoo Addon Migrator v1.0.0-rc.2"             --notes-file release-notes.md             --prerelease
