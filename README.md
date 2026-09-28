@@ -31,8 +31,6 @@ For v1.0.0:
 Assets:
 
 - `OdooAddonMigrator_Setup.exe` — recommended Windows installer.
-- `OdooAddonMigrator-Windows.zip` — portable Windows build.
-- `SHA256SUMS-Windows.txt` — checksums for the Windows packages.
 
 ### Ubuntu x86_64 release
 
@@ -47,21 +45,11 @@ For v1.0.0:
 Assets:
 
 - `OdooAddonMigrator_1.0.0_amd64.deb` — recommended Ubuntu package.
-- `OdooAddonMigrator-Ubuntu-x86_64.tar.gz` — portable Ubuntu build.
-- `SHA256SUMS-Ubuntu.txt` — checksums for the Ubuntu packages.
 
 Install the Debian package with:
 
 ```bash
 sudo apt install ./OdooAddonMigrator_1.0.0_amd64.deb
-```
-
-Portable Ubuntu usage:
-
-```bash
-tar -xzf OdooAddonMigrator-Ubuntu-x86_64.tar.gz
-cd OdooAddonMigrator
-./OdooAddonMigrator
 ```
 
 ## What is bundled
@@ -104,10 +92,6 @@ Please do **not** post credentials, customer data, proprietary addon source code
 Static migration and validation cannot guarantee production compatibility. Always install and test migrated addons on the target Odoo version before using them in production.
 
 The Windows installer may be unsigned, so Microsoft SmartScreen can display a warning.
-
-## Checksums
-
-Every stable platform release includes its own SHA-256 checksum file so downloaded packages can be verified before installation.
 
 ## Project note
 
