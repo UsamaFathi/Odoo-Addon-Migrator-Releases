@@ -4,41 +4,69 @@ Public desktop releases for **Odoo Addon Migrator**.
 
 Odoo Addon Migrator helps developers migrate custom Odoo addons across supported versions from **Odoo 14 through Odoo 19** while keeping the original addon folder unchanged.
 
-The desktop packages include Community and authorized Enterprise-derived migration knowledge. Users select only their custom addons and migration versions; no Odoo source checkout or internal model selection is required. The packages contain derived compatibility knowledge, not Odoo source files.
+Every production desktop package published here includes both **Community migration knowledge** and **authorized Enterprise-derived migration knowledge**. End users select only their custom addons and migration versions; no Odoo source checkout, Enterprise source folder, training step, or runtime source indexing is required.
+
+The packaged migration knowledge contains derived compatibility data only and does not contain Odoo Community or Enterprise source files.
 
 ## Downloads
 
-Open the **Releases** section of this repository and download the package for your operating system.
+Each stable version is published as **two separate GitHub Releases** so users can immediately choose the correct operating system.
 
-### Windows
+### Windows release
 
-**Recommended**
-- `OdooAddonMigrator_Setup.exe` — Windows installer.
+Release tag format:
 
-**Portable**
-- `OdooAddonMigrator-Windows.zip` — extract and run `OdooAddonMigrator.exe`.
+`v<version>-windows`
 
-### Ubuntu x86_64
+For v1.0.0:
 
-**Recommended**
-- `OdooAddonMigrator_<version>_amd64.deb`
+`v1.0.0-windows`
 
-Install with:
+Assets:
+
+- `OdooAddonMigrator_Setup.exe` — recommended Windows installer.
+- `OdooAddonMigrator-Windows.zip` — portable Windows build.
+- `SHA256SUMS-Windows.txt` — checksums for the Windows packages.
+
+### Ubuntu x86_64 release
+
+Release tag format:
+
+`v<version>-ubuntu`
+
+For v1.0.0:
+
+`v1.0.0-ubuntu`
+
+Assets:
+
+- `OdooAddonMigrator_1.0.0_amd64.deb` — recommended Ubuntu package.
+- `OdooAddonMigrator-Ubuntu-x86_64.tar.gz` — portable Ubuntu build.
+- `SHA256SUMS-Ubuntu.txt` — checksums for the Ubuntu packages.
+
+Install the Debian package with:
 
 ```bash
-sudo apt install ./OdooAddonMigrator_*_amd64.deb
+sudo apt install ./OdooAddonMigrator_1.0.0_amd64.deb
 ```
 
-**Portable**
-- `OdooAddonMigrator-Ubuntu-x86_64.tar.gz`
-
-Run with:
+Portable Ubuntu usage:
 
 ```bash
 tar -xzf OdooAddonMigrator-Ubuntu-x86_64.tar.gz
 cd OdooAddonMigrator
 ./OdooAddonMigrator
 ```
+
+## What is bundled
+
+Production releases include:
+
+- Community migration knowledge for Odoo 14 through Odoo 19.
+- Authorized Enterprise-derived migration knowledge for Odoo 14 through Odoo 19.
+- The desktop migration engine and static validation workflow.
+
+The production build process verifies that both migration-knowledge components are present before release artifacts are accepted.
 
 ## Typical workflow
 
@@ -57,6 +85,7 @@ The original custom addon folder is not modified by the migration workflow.
 We are actively collecting real migration experience to improve compatibility and usability.
 
 Use the repository **Issues** section and choose:
+
 - **Bug report** for crashes, installation problems, incorrect migrations, or validation problems.
 - **Product feedback** to share migration results, manual fixes that were still required, and UI/workflow feedback.
 
@@ -66,11 +95,11 @@ Please do **not** post credentials, customer data, proprietary addon source code
 
 Static migration and validation cannot guarantee production compatibility. Always install and test migrated addons on the target Odoo version before using them in production.
 
-The Windows build may be unsigned, so Microsoft SmartScreen can display a warning.
+The Windows installer may be unsigned, so Microsoft SmartScreen can display a warning.
 
 ## Checksums
 
-Stable releases include `SHA256SUMS.txt` so downloaded files can be verified before installation.
+Every stable platform release includes its own SHA-256 checksum file so downloaded packages can be verified before installation.
 
 ## Project note
 
