@@ -1,12 +1,12 @@
 # Odoo Addon Migrator — Releases
 
-Public binary releases for **Odoo Addon Migrator**.
+Public desktop releases for **Odoo Addon Migrator**.
 
-Odoo Addon Migrator is a desktop migration assistant for custom Odoo addons, supporting migration paths across **Odoo 14 → 19**.
+Odoo Addon Migrator helps developers migrate custom Odoo addons across supported versions from **Odoo 14 through Odoo 19** while keeping the original addon folder unchanged.
 
 ## Downloads
 
-Open the **Releases** section of this repository and choose the package for your operating system.
+Open the **Releases** section of this repository and download the package for your operating system.
 
 ### Windows
 
@@ -19,15 +19,13 @@ Open the **Releases** section of this repository and choose the package for your
 ### Ubuntu x86_64
 
 **Recommended**
-- `OdooAddonMigrator_<version>_amd64.deb` — Ubuntu/Debian installer.
+- `OdooAddonMigrator_<version>_amd64.deb`
 
 Install with:
 
 ```bash
 sudo apt install ./OdooAddonMigrator_*_amd64.deb
 ```
-
-Then open **Odoo Addon Migrator** from the applications menu.
 
 **Portable**
 - `OdooAddonMigrator-Ubuntu-x86_64.tar.gz`
@@ -40,23 +38,40 @@ cd OdooAddonMigrator
 ./OdooAddonMigrator
 ```
 
-## Odoo source choices
+## Typical workflow
 
-For every required Odoo version, the application supports either:
+1. Select the custom addons folder.
+2. Confirm or choose the source Odoo version.
+3. Choose the target Odoo version.
+4. Choose a separate output folder.
+5. Start the migration.
+6. Review the migration report and diff.
+7. Install and test the migrated addons on the target Odoo environment.
 
-- **Local Exact Source** — select an existing local Odoo source tree. It is read-only and is never modified.
-- **Verified Snapshot** — use the pinned official Odoo Community source snapshot. If it is not cached, the application asks before downloading it.
+The original custom addon folder is not modified by the migration workflow.
 
-Git is only required when downloading verified snapshots.
+## Feedback and bug reports
 
-## Release status
+We are actively collecting real migration experience to improve compatibility and usability.
 
-Current builds are **release candidates**. Static validation does not guarantee runtime or production compatibility. Always install and test migrated addons on the target Odoo version before production use.
+Use the repository **Issues** section and choose:
+- **Bug report** for crashes, installation problems, incorrect migrations, or validation problems.
+- **Product feedback** to share migration results, manual fixes that were still required, and UI/workflow feedback.
 
-The Windows build is currently unsigned, so Microsoft SmartScreen may show a warning.
+Please do **not** post credentials, customer data, proprietary addon source code, private logs containing secrets, or other sensitive information in public issues.
+
+## Validation and production use
+
+Static migration and validation cannot guarantee production compatibility. Always install and test migrated addons on the target Odoo version before using them in production.
+
+The Windows build may be unsigned, so Microsoft SmartScreen can display a warning.
+
+## Checksums
+
+Stable releases include `SHA256SUMS.txt` so downloaded files can be verified before installation.
 
 ## Project note
 
-This repository contains **binary release files only**. The application source repository is maintained separately.
+This repository contains public release files and feedback resources only. Application development is maintained separately.
 
 Odoo Addon Migrator is an independent migration utility and is not affiliated with Odoo S.A.
