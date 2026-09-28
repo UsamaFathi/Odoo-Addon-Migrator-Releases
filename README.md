@@ -6,6 +6,8 @@ Odoo Addon Migrator helps developers migrate custom Odoo addons across supported
 
 Every production desktop package published here includes both **Community migration knowledge** and **authorized Enterprise-derived migration knowledge**. End users select only their custom addons and migration versions; no Odoo source checkout, Enterprise source folder, training step, or runtime source indexing is required.
 
+The public desktop interface is intentionally simplified: Official Odoo source management, Community/Enterprise source paths, and Migration Brain controls are not exposed to end users. The Project page remains clean and scrollable while the bundled migration knowledge works internally.
+
 The packaged migration knowledge contains derived compatibility data only and does not contain Odoo Community or Enterprise source files.
 
 ## Downloads
@@ -77,6 +79,8 @@ The production build process verifies that both migration-knowledge components a
 5. Start the migration.
 6. Review the migration report and diff.
 7. Install and test the migrated addons on the target Odoo environment.
+
+There is no source-management setup step in the public app.
 
 The original custom addon folder is not modified by the migration workflow.
 
