@@ -4,6 +4,8 @@ Public desktop releases for **Odoo Addon Migrator**.
 
 Odoo Addon Migrator helps developers migrate custom Odoo addons across supported versions from **Odoo 14 through Odoo 19** while keeping the original addon folder unchanged.
 
+The desktop packages include Community and authorized Enterprise-derived migration knowledge. Users select only their custom addons and migration versions; no Odoo source checkout or internal model selection is required. The packages contain derived compatibility knowledge, not Odoo source files.
+
 ## Downloads
 
 Open the **Releases** section of this repository and download the package for your operating system.

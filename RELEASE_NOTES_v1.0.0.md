@@ -21,6 +21,8 @@ Odoo 14 through Odoo 19 using adjacent migration steps for multi-version upgrade
 - Local desktop workflow; the original custom addon folder is never modified.
 - Separate migrated output directory.
 - Automatic migration and static validation across supported Odoo versions.
+- Bundled Community and authorized Enterprise-derived migration knowledge; no Odoo source checkout is required by end users.
+- The bundled knowledge contains derived compatibility data only and does not contain Odoo Community or Enterprise source files.
 - Python, XML, manifest, security, JavaScript, view, and compatibility transformations.
 - Multi-hop migrations such as 16 → 18 and 16 → 19.
 - Migration report and diff for review.
