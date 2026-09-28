@@ -1,0 +1,57 @@
+name: Product feedback
+description: Share migration results, usability feedback, or a compatibility experience.
+title: "[Feedback] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Your feedback helps improve migration coverage and usability. Please do not include credentials, customer data, or private source code.
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - Ubuntu
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: migration
+    attributes:
+      label: Migration path used
+      placeholder: "Odoo 16 -> 18"
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Overall result
+      options:
+        - Migrated successfully with no manual fixes
+        - Migrated successfully with small manual fixes
+        - Needed significant manual fixes
+        - Migration did not complete
+    validations:
+      required: true
+  - type: textarea
+    id: useful
+    attributes:
+      label: What worked well?
+  - type: textarea
+    id: problems
+    attributes:
+      label: What still needed manual work?
+      description: Technical descriptions are useful; avoid pasting proprietary code.
+  - type: textarea
+    id: ux
+    attributes:
+      label: UI / workflow feedback
