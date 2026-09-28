@@ -1,0 +1,56 @@
+name: Bug report
+description: Report a problem while installing, analyzing, migrating, or validating an addon.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing Odoo Addon Migrator. Please remove passwords, tokens, customer data, and proprietary source code before posting.
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows 10
+        - Windows 11
+        - Ubuntu 22.04
+        - Ubuntu 24.04
+        - Other Linux
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Odoo Addon Migrator version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: path
+    attributes:
+      label: Migration path
+      placeholder: "Odoo 16 -> 18"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Select custom addons folder...
+        2. Choose source...
+        3. Choose target...
+        4. Start migration...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: Paste only the relevant part. Do not attach private addon source unless you are comfortable sharing it publicly.
