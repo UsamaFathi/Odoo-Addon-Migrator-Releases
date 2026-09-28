@@ -10,6 +10,10 @@ The public desktop interface is intentionally simplified: Official Odoo source m
 
 The packaged migration knowledge contains derived compatibility data only and does not contain Odoo Community or Enterprise source files.
 
+## Current release status
+
+The currently published binary release is **v1.0.0-rc.2**, an older prerelease. The stable **v1.0.0** Windows and Ubuntu packages will replace it as the recommended downloads after the final Community + Enterprise production builds are generated and verified.
+
 ## Downloads
 
 Each stable version is published as **two separate GitHub Releases** so users can immediately choose the correct operating system.
