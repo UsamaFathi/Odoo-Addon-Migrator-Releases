@@ -2,6 +2,8 @@
 
 Public desktop releases for **Odoo Addon Migrator**.
 
+Current stable release: **v1.0.1**.
+
 Odoo Addon Migrator helps developers migrate custom Odoo addons across supported versions from **Odoo 14 through Odoo 19** while keeping the original addon folder unchanged.
 
 Every production desktop package published here includes both **Community migration knowledge** and **authorized Enterprise-derived migration knowledge**. End users select only their custom addons and migration versions; no Odoo source checkout, Enterprise source folder, training step, or runtime source indexing is required.
@@ -12,7 +14,7 @@ The packaged migration knowledge contains derived compatibility data only and do
 
 ## Current release status
 
-The currently published binary release is **v1.0.0-rc.2**, an older prerelease. The stable **v1.0.0** Windows and Ubuntu packages will replace it as the recommended downloads after the final Community + Enterprise production builds are generated and verified.
+The current stable release is **v1.0.1**. It includes the Community and authorized Enterprise-derived migration knowledge and the Odoo 16 modifier-domain crash fix.
 
 ## Downloads
 
@@ -24,9 +26,9 @@ Release tag format:
 
 `v<version>-windows`
 
-For v1.0.0:
+For v1.0.1:
 
-`v1.0.0-windows`
+`v1.0.1-windows`
 
 Assets:
 
@@ -38,18 +40,18 @@ Release tag format:
 
 `v<version>-ubuntu`
 
-For v1.0.0:
+For v1.0.1:
 
-`v1.0.0-ubuntu`
+`v1.0.1-ubuntu`
 
 Assets:
 
-- `OdooAddonMigrator_1.0.0_amd64.deb` — recommended Ubuntu package.
+- `OdooAddonMigrator_1.0.1_amd64.deb` — recommended Ubuntu package.
 
 Install the Debian package with:
 
 ```bash
-sudo apt install ./OdooAddonMigrator_1.0.0_amd64.deb
+sudo apt install ./OdooAddonMigrator_1.0.1_amd64.deb
 ```
 
 ## What is bundled
@@ -92,6 +94,10 @@ Please do **not** post credentials, customer data, proprietary addon source code
 Static migration and validation cannot guarantee production compatibility. Always install and test migrated addons on the target Odoo version before using them in production.
 
 The Windows installer may be unsigned, so Microsoft SmartScreen can display a warning.
+
+## Checksums
+
+Stable releases include SHA-256 checksum files so downloaded files can be verified before installation.
 
 ## Project note
 
