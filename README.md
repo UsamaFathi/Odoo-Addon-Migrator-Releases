@@ -2,7 +2,7 @@
 
 Public desktop releases for **Odoo Addon Migrator**.
 
-Current stable release: **v1.0.2**.
+Current stable release: **v1.0.3**.
 
 Odoo Addon Migrator helps developers migrate custom Odoo addons across supported versions from **Odoo 14 through Odoo 19** while keeping the original addon folder unchanged.
 
@@ -14,7 +14,7 @@ The packaged migration knowledge contains derived compatibility data only and do
 
 ## Current release status
 
-The current stable release is **v1.0.2**. It includes the Community and authorized Enterprise-derived migration knowledge, the Odoo 16 modifier-domain crash fix, and the Odoo 18→19 `res.groups.category_id` migration fix.
+The current stable release is **v1.0.3**. It includes the Community and authorized Enterprise-derived migration knowledge, the Odoo 16 modifier-domain crash fix, the Odoo 18→19 `res.groups.category_id` migration fix, and the Odoo 18→19 `res.users.groups_id` to `group_ids` migration fix.
 
 ## Downloads
 
@@ -26,9 +26,9 @@ Release tag format:
 
 `v<version>-windows`
 
-For v1.0.2:
+For v1.0.3:
 
-`v1.0.2-windows`
+`v1.0.3-windows`
 
 Assets:
 
@@ -40,18 +40,18 @@ Release tag format:
 
 `v<version>-ubuntu`
 
-For v1.0.2:
+For v1.0.3:
 
-`v1.0.2-ubuntu`
+`v1.0.3-ubuntu`
 
 Assets:
 
-- `OdooAddonMigrator_1.0.2_amd64.deb` — recommended Ubuntu package.
+- `OdooAddonMigrator_1.0.3_amd64.deb` — recommended Ubuntu package.
 
 Install the Debian package with:
 
 ```bash
-sudo apt install ./OdooAddonMigrator_1.0.2_amd64.deb
+sudo apt install ./OdooAddonMigrator_1.0.3_amd64.deb
 ```
 
 ## What is bundled
