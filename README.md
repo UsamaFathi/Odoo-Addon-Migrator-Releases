@@ -2,11 +2,13 @@
 
 Public desktop releases for **Odoo Addon Migrator**.
 
-Latest available release: **v1.0.4 for Windows**. Ubuntu remains at **v1.0.3** until a matching 1.0.4 package is built.
+Latest available release: **v1.0.5 for Windows**. Ubuntu remains at **v1.0.3**.
+
+[Download Windows v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows)
 
 Odoo Addon Migrator helps developers migrate custom Odoo addons across supported versions from **Odoo 14 through Odoo 19** while keeping the original addon folder unchanged.
 
-Every production desktop package published here includes both **Community migration knowledge** and **authorized Enterprise-derived migration knowledge**. End users select only their custom addons and migration versions; no Odoo source checkout, Enterprise source folder, training step, or runtime source indexing is required.
+The Windows v1.0.5 desktop package includes **Community migration knowledge**. Enterprise overlays remain separate artifacts for local authorized use and are not distributed in this release. End users select only their custom addons and migration versions; no Odoo source checkout, Enterprise source folder, training step, or runtime source indexing is required.
 
 The public desktop interface is intentionally simplified: Official Odoo source management, Community/Enterprise source paths, and Migration Brain controls are not exposed to end users. The Project page remains clean and scrollable while the bundled migration knowledge works internally.
 
@@ -14,13 +16,13 @@ The packaged migration knowledge contains derived compatibility data only and do
 
 ## Current release status
 
-The Windows v1.0.4 release includes the Community and authorized Enterprise-derived migration knowledge, plus source-backed Odoo 19 inherited-view anchor handling. It reports genuinely missing XPath anchors for review instead of applying unsafe rewrites.
+Windows v1.0.5 adds structural View Intelligence with a retrained schema-v5 Community Brain. It analyzes moved, hidden, replaced and fragile inherited-view anchors and suggests candidates for review without speculative XML replacement. Canonical source support does not prove effective database view compatibility. Historical Windows v1.0.4 remains available unchanged.
 
-Ubuntu v1.0.3 remains the latest available Ubuntu package until the v1.0.4 package is built and verified.
+Ubuntu v1.0.3 remains the latest available Ubuntu package. No Ubuntu v1.0.5 binary has been built or published.
 
 ## Downloads
 
-Each stable version is published as **two separate GitHub Releases** so users can immediately choose the correct operating system.
+Platform packages use separate GitHub Releases. Availability is reported independently for Windows and Ubuntu.
 
 ### Windows release
 
@@ -28,9 +30,9 @@ Release tag format:
 
 `v<version>-windows`
 
-For v1.0.4:
+For v1.0.5:
 
-`v1.0.4-windows`
+`v1.0.5-windows`
 
 Assets:
 
@@ -58,13 +60,12 @@ sudo apt install ./OdooAddonMigrator_1.0.3_amd64.deb
 
 ## What is bundled
 
-Production releases include:
+Windows v1.0.5 includes:
 
 - Community migration knowledge for Odoo 14 through Odoo 19.
-- Authorized Enterprise-derived migration knowledge for Odoo 14 through Odoo 19.
 - The desktop migration engine and static validation workflow.
 
-The production build process verifies that both migration-knowledge components are present before release artifacts are accepted.
+The v1.0.5 build verifies the Community Brain integrity and excludes Enterprise overlays. Older release notes describe the contents of their respective packages.
 
 ## Typical workflow
 

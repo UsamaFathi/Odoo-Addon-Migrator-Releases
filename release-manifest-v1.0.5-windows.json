@@ -1,0 +1,154 @@
+{
+  "application_source_commit": "52bdd7d1d6839e0bd96645e6df79d6fbaf8960b5",
+  "asset_sha256": {
+    "OdooAddonMigrator-Windows.zip": "6fda6d66868f055d631e7c54d10bd3834ad43cd006fadbfcd26da09bfb2d8dc5",
+    "OdooAddonMigrator_Setup.exe": "4da322e897e3d99d61c325519d9f7278a004156f3524ffe625ecbbfe722758ce"
+  },
+  "community_brain": {
+    "anchor_transitions": 84699,
+    "base_fingerprint": null,
+    "distribution_policy": "public_community",
+    "fingerprint": "382a990e813851f28a43d25613d84794f3e20398483f97db9b3d803dcef8939a",
+    "leakage_audit": {
+      "files_scanned": 0,
+      "fragments_checked": 0,
+      "status": "not_required"
+    },
+    "production_api_holdout": {
+      "abstained": 3766,
+      "correct_auto_fixes": 7177,
+      "coverage": 0.655853,
+      "decisions": 7177,
+      "false_auto_fix_rate": 0.0,
+      "false_auto_fixes": 0,
+      "groups": 10943,
+      "margin": 0.08,
+      "precision": 1.0,
+      "recall": 0.655853,
+      "threshold": 0.8
+    },
+    "schema": 5,
+    "sha256": "dd633d8ce8e1a2204c50fe1df742bc9a2bf2d36baa8c1aa31c6e4107d433afa7",
+    "source_code_included": false,
+    "training_examples": 210628,
+    "validation_metrics": {
+      "14_to_15": {
+        "abstentions": 421,
+        "confidence_threshold": 0.9,
+        "coverage": 0.7638810992708918,
+        "decisions": 1362,
+        "evaluation_kind": "heldout_retained_identity_proxy",
+        "false_suggestion_rate": 0.0,
+        "margin_threshold": 0.15,
+        "precision": 1.0,
+        "recall": 0.7638810992708918,
+        "replacement_precision_established": false,
+        "top_1_accuracy": 0.900168255748738,
+        "total_candidate_groups": 1783,
+        "unlabelled_removed_groups": 296
+      },
+      "15_to_16": {
+        "abstentions": 514,
+        "confidence_threshold": 0.9,
+        "coverage": 0.7424849699398798,
+        "decisions": 1482,
+        "evaluation_kind": "heldout_retained_identity_proxy",
+        "false_suggestion_rate": 0.0020242914979757085,
+        "margin_threshold": 0.15,
+        "precision": 0.9979757085020243,
+        "recall": 0.7409819639278558,
+        "replacement_precision_established": false,
+        "top_1_accuracy": 0.8962925851703407,
+        "total_candidate_groups": 1996,
+        "unlabelled_removed_groups": 246
+      },
+      "16_to_17": {
+        "abstentions": 788,
+        "confidence_threshold": 0.9,
+        "coverage": 0.6375344986200552,
+        "decisions": 1386,
+        "evaluation_kind": "heldout_retained_identity_proxy",
+        "false_suggestion_rate": 0.0007215007215007215,
+        "margin_threshold": 0.15,
+        "precision": 0.9992784992784993,
+        "recall": 0.6370745170193193,
+        "replacement_precision_established": false,
+        "top_1_accuracy": 0.8845446182152714,
+        "total_candidate_groups": 2174,
+        "unlabelled_removed_groups": 412
+      },
+      "17_to_18": {
+        "abstentions": 622,
+        "confidence_threshold": 0.9,
+        "coverage": 0.7345283824157064,
+        "decisions": 1721,
+        "evaluation_kind": "heldout_retained_identity_proxy",
+        "false_suggestion_rate": 0.0005810575246949448,
+        "margin_threshold": 0.15,
+        "precision": 0.999418942475305,
+        "recall": 0.7341015791720017,
+        "replacement_precision_established": false,
+        "top_1_accuracy": 0.8864703371745625,
+        "total_candidate_groups": 2343,
+        "unlabelled_removed_groups": 689
+      },
+      "18_to_19": {
+        "abstentions": 523,
+        "confidence_threshold": 0.9,
+        "coverage": 0.7732003469210754,
+        "decisions": 1783,
+        "evaluation_kind": "heldout_retained_identity_proxy",
+        "false_suggestion_rate": 0.0011217049915872126,
+        "margin_threshold": 0.15,
+        "precision": 0.9988782950084127,
+        "recall": 0.7723330442324371,
+        "replacement_precision_established": false,
+        "top_1_accuracy": 0.9080659150043365,
+        "total_candidate_groups": 2306,
+        "unlabelled_removed_groups": 520
+      }
+    },
+    "view_transitions": 17319
+  },
+  "created_at": "2026-10-06T18:04:07.097221+00:00",
+  "effective_database_compatibility_validated": false,
+  "enterprise_overlay_included": false,
+  "platform": "windows-x86_64",
+  "toolchain": {
+    "inno_setup": "6.7.3",
+    "pyinstaller": "6.22.3",
+    "pyside6": "6.11.2",
+    "python": "3.12.10"
+  },
+  "validation": {
+    "full_suite": {
+      "failed": 0,
+      "passed": 274,
+      "warnings": 1
+    },
+    "installer": {
+      "community_hash_verified": true,
+      "enterprise_overlay_absent": true,
+      "installed_smoke_exit": 0,
+      "installed_version": "1.0.5",
+      "installer_exit": 0,
+      "uninstall_exit": 0,
+      "uninstall_verified": true
+    },
+    "owner_training_regressions": {
+      "failed": 0,
+      "passed": 103
+    },
+    "portable_gui_smoke_exit": 0,
+    "public_source_free_smoke": {
+      "effective_view_validated": false,
+      "input_unchanged": true,
+      "path": "15->16->17->18->19",
+      "review_findings": 4,
+      "source_code_indexed_at_runtime": false
+    },
+    "zip_brain_hash_verified": true
+  },
+  "version": "1.0.5",
+  "view_anchor_suggestions": "review_only"
+}
