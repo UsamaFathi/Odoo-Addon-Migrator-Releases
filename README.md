@@ -2,9 +2,9 @@
 
 Public desktop releases for **Odoo Addon Migrator**.
 
-Latest downloadable release: **Ubuntu v1.0.5 x86_64**. Ubuntu is the only public release, as requested by the owner.
+Latest downloadable release: **[Windows v1.0.5 ? folder scan fixed](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows)**. Ubuntu v1.0.5 is being refreshed with the same fix.
 
-Windows build files are retained locally. No Windows release is currently offered; historical Windows notes remain for reference.
+The Windows v1.0.5 installer and portable ZIP are rebuilt, tested and published. The folder-selection cache no longer requires loose Python source files.
 
 Odoo Addon Migrator helps developers migrate custom Odoo addons across supported versions from **Odoo 14 through Odoo 19** while keeping the original addon folder unchanged.
 
@@ -24,7 +24,7 @@ Ubuntu v1.0.5 is published with the identical Community Brain. All 274 tests pas
 
 ## Downloads
 
-The current public package is Ubuntu x86_64.
+Platform packages use separate release tags. The corrected Windows package is available; corrected Ubuntu assets are uploading.
 
 ### Ubuntu x86_64 release
 
