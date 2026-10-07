@@ -2,9 +2,9 @@
 
 Public desktop releases for **Odoo Addon Migrator**.
 
-Latest downloadable releases: **v1.0.5 for Windows and Ubuntu x86_64**.
+Latest downloadable release: **Ubuntu v1.0.5 x86_64**. The previously published Windows v1.0.5 release is currently unavailable; its validated build files are retained.
 
-[Download Windows v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows). The release includes the installer, portable ZIP, SHA-256 checksums and validation manifest.
+Windows publication status is being checked with the owner. Its former public release URL currently returns 404.
 
 Odoo Addon Migrator helps developers migrate custom Odoo addons across supported versions from **Odoo 14 through Odoo 19** while keeping the original addon folder unchanged.
 
@@ -39,6 +39,8 @@ For v1.0.5:
 Assets:
 
 - `OdooAddonMigrator_Setup.exe` — recommended Windows installer.
+- `OdooAddonMigrator-Windows.zip` ? portable application.
+- `SHA256SUMS-Windows.txt` and `release-manifest.json` ? checksums and validation.
 
 ### Ubuntu x86_64 release
 
@@ -53,6 +55,8 @@ For v1.0.5:
 Assets:
 
 - `OdooAddonMigrator_1.0.5_amd64.deb` — recommended Ubuntu package.
+- `OdooAddonMigrator-Ubuntu-x86_64.tar.gz` ? portable application.
+- `SHA256SUMS-Ubuntu.txt` and `release-manifest-ubuntu.json` ? checksums and validation.
 
 Install the Debian package with:
 
