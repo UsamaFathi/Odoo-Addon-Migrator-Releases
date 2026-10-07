@@ -2,13 +2,15 @@
 
 Public desktop releases for **Odoo Addon Migrator**.
 
-Latest downloadable release: **[Windows v1.0.5 ? folder scan fixed](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows)**. Ubuntu v1.0.5 is being refreshed with the same fix.
+Current corrected releases: **[Windows v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows)** and **[Ubuntu v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-ubuntu)**.
+
+Both packages were rebuilt to fix the missing `sources/indexer.py` error on custom-addon folder selection. Frozen cache keys use bundled bytecode. Download fresh files and reinstall; the displayed version remains 1.0.5. All corrected asset checksums are verified.
 
 The Windows v1.0.5 installer and portable ZIP are rebuilt, tested and published. The folder-selection cache no longer requires loose Python source files.
 
 Odoo Addon Migrator helps developers migrate custom Odoo addons across supported versions from **Odoo 14 through Odoo 19** while keeping the original addon folder unchanged.
 
-The Ubuntu v1.0.5 desktop package includes **Community migration knowledge**. Enterprise overlays remain separate artifacts for local authorized use and are not distributed in this release. End users select only their custom addons and migration versions; no Odoo source checkout, Enterprise source folder, training step, or runtime source indexing is required.
+The Windows and Ubuntu v1.0.5 desktop packages include **Community migration knowledge**. Enterprise overlays remain separate artifacts for local authorized use and are not distributed in this release. End users select only their custom addons and migration versions; no Odoo source checkout, Enterprise source folder, training step, or runtime source indexing is required.
 
 The public desktop interface is intentionally simplified: Official Odoo source management, Community/Enterprise source paths, and Migration Brain controls are not exposed to end users. The Project page remains clean and scrollable while the bundled migration knowledge works internally.
 
@@ -18,13 +20,21 @@ The packaged migration knowledge contains derived compatibility data only and do
 
 Windows v1.0.5 adds structural View Intelligence with a retrained schema-v5 Community Brain. It analyzes moved, hidden, replaced and fragile inherited-view anchors and suggests candidates for review without speculative XML replacement. Canonical source support does not prove effective database view compatibility. Historical release notes remain in this repository.
 
-Ubuntu v1.0.5 is published with the identical Community Brain. All 274 tests passed; clean installation, offscreen/X11 GUI startup and removal were verified in Ubuntu 22.04.5.
+Ubuntu v1.0.5 is published with the identical Community Brain. All 277 tests passed; clean installation, offscreen/X11 GUI startup and removal were verified in Ubuntu 22.04.5.
 
 [Download Ubuntu v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-ubuntu). Tested in a 4 GB VM; 8 GB RAM is recommended. A 2 GB VM was insufficient. See its release notes for CPU requirements and measured startup memory/time.
 
 ## Downloads
 
-Platform packages use separate release tags. The corrected Windows package is available; corrected Ubuntu assets are uploading.
+Corrected Windows and Ubuntu packages use separate release tags.
+
+### Windows release
+
+[Download corrected Windows v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows)
+
+- `OdooAddonMigrator_Setup.exe` ? installer; close the app and reinstall.
+- `OdooAddonMigrator-Windows.zip` ? portable application.
+- `SHA256SUMS-Windows.txt` and `release-manifest.json` ? checksums and validation.
 
 ### Ubuntu x86_64 release
 
@@ -50,7 +60,7 @@ sudo apt install ./OdooAddonMigrator_1.0.5_amd64.deb
 
 ## What is bundled
 
-Ubuntu v1.0.5 includes:
+Windows and Ubuntu v1.0.5 include:
 
 - Community migration knowledge for Odoo 14 through Odoo 19.
 - The desktop migration engine and static validation workflow.
