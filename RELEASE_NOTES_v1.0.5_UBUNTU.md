@@ -1,5 +1,9 @@
 # Odoo Addon Migrator v1.0.5 - Ubuntu x86_64
 
+Rebuilt v1.0.5 fixes the missing `sources/indexer.py` error when selecting a
+custom addons folder. Frozen cache identity uses bundled bytecode; no loose
+application source files are required. The trained Community Brain is unchanged.
+
 View Intelligence analyzes inherited-view changes across Odoo
 14 -> 15 -> 16 -> 17 -> 18 -> 19, including moved or hidden fields,
 parent/sibling changes, repeated occurrences and fragile XPath anchors.
@@ -9,14 +13,14 @@ Includes the same schema-v5 Community Brain as Windows v1.0.5:
 17,319 view profiles and 84,699 anchor transitions. Enterprise overlays are
 separate local-authorized artifacts and are not included.
 
-Validation: 274 tests passed in Ubuntu 22.04.5. The portable application,
+Validation: 277 tests passed in Ubuntu 22.04.5. The portable application,
 Debian installation in a separate clean Ubuntu VM, installed offscreen and
 X11 GUI smoke tests, and package removal passed. Source-free Community
 15->19 migration preserved its input and did not index Odoo source.
 
 Requirements: Ubuntu 22.04 x86_64; CPU support for SSSE3, SSE4.1, SSE4.2 and
 POPCNT (Qt 6.11). Validated in a 4 GB VM; 8 GB RAM is recommended. A 2 GB VM
-was insufficient. Measured startup peak was approximately 2.14 GiB resident
+was insufficient. During initial v1.0.5 validation, measured startup peak was approximately 2.14 GiB resident
 memory, and startup took about 38 seconds while loading/verifying the Brain.
 
 Assets:

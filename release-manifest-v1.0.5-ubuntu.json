@@ -1,8 +1,8 @@
 {
-  "application_source_commit": "f627cc2b7c4c48bd6d1956315056c12d713bb154",
+  "application_source_commit": "0c3e4074d9cab5e1d513863107b398ac332f3225",
   "asset_sha256": {
-    "OdooAddonMigrator-Ubuntu-x86_64.tar.gz": "bb1cf9486bcf53f9b7ea3005e25ab482babeaad38414f20467c60418fb4ded06",
-    "OdooAddonMigrator_1.0.5_amd64.deb": "7cd8037849d473791f02c28801f7e09a8a2d3d1d539eacd37115643141647604"
+    "OdooAddonMigrator_1.0.5_amd64.deb": "ba37b22211d3a721ebcfcc37fd7c80e3b00b72ff1d18f60283788670b4533e30",
+    "OdooAddonMigrator-Ubuntu-x86_64.tar.gz": "aa133ce191121861f914dd9d1b112605fbaeee7b407c6f2022ea3bcc184b25ae"
   },
   "build_environment": {
     "acceleration": "WHPX",
@@ -28,13 +28,14 @@
     "startup_elapsed_seconds": 38.15,
     "startup_maximum_resident_kib": 2247280,
     "two_gib_vm_startup": "failed_out_of_memory",
-    "validated_vm_ram_mib": 4096
+    "validated_vm_ram_mib": 4096,
+    "measurement_build": "initial_v1_0_5_before_folder_scan_fix"
   },
   "validation": {
     "clean_ubuntu_deb_install": "passed",
     "full_suite": {
+      "passed": 277,
       "failed": 0,
-      "passed": 274,
       "skipped": 0
     },
     "installed_offscreen_gui": "passed",
@@ -47,9 +48,12 @@
       "path": "15->16->17->18->19",
       "review_findings": 4,
       "source_code_indexed_at_runtime": false
-    }
+    },
+    "portable_folder_selection_smoke": "passed",
+    "installed_folder_selection_smoke": "passed"
   },
   "validation_source_snapshot_commit": "d186e5fc3e452b4064d46dfb46ab0668d8fb6c52",
   "version": "1.0.5",
-  "view_anchor_suggestions": "review_only"
+  "view_anchor_suggestions": "review_only",
+  "release_build_revision": "frozen-folder-scan-fix"
 }
