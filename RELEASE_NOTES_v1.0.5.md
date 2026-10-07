@@ -1,5 +1,17 @@
 # Odoo Addon Migrator v1.0.5 - Windows
 
+The latest rebuild fixes canonical legacy `res.config.settings` app insertions:
+complete named app blocks inserted inside the removed `div.settings` move to
+named `app` nodes inside `//form`. Inner fields, labels, help, modifiers and
+layout are preserved. Partial/ambiguous inheritance operations remain for review.
+Literal settings-form actions also migrate the removed Odoo 19 `inline` target
+to `current`. Both rules work with existing trained Brains; no retraining is
+required. Manifests identify `settings-layout-fix` and code commit `e86741b`.
+
+The real-addon install check validated its settings view and action, then stopped
+later on a separate missing custom security-group XML ID in a menu. This is not
+a full addon-installation pass or effective customer-database validation.
+
 The latest v1.0.5 rebuild fixes Odoo 19 search-view validation by removing
 legacy `expand` and `string` attributes from search-view groups. Legacy
 boolean `attrs` modifiers and quoted values containing `>` are converted
@@ -38,7 +50,7 @@ the target Odoo environment and inspect its effective inherited views.
 Windows assets: installer, portable ZIP, SHA-256 checksums and release manifest.
 Ubuntu uses a separate platform build and release tag.
 
-Validation for this rebuild: 280 tests passed (one existing deprecation warning).
+Validation for this rebuild: 298 tests passed (one existing deprecation warning).
 The portable executable and an isolated installation of the identical payload
 passed the actual folder-selection/scan smoke without loose indexer source.
 The existing user installation was left unchanged.

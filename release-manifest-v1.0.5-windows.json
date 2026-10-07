@@ -1,8 +1,8 @@
 {
-  "application_source_commit": "26a994cd3e25b9b5ec2504a48f7c5e26a6e72664",
+  "application_source_commit": "e86741b6a0f64eaccbc7a50951cd81938a47ede9",
   "asset_sha256": {
-    "OdooAddonMigrator-Windows.zip": "2210a1862c9658b98afc054de62315b332d784c3aafc21477fc48c8a6c9c5821",
-    "OdooAddonMigrator_Setup.exe": "8a163eb19f4fc73ba39bc706744ba7abfdc646051c7c2009106e2c957338b6ca"
+    "OdooAddonMigrator-Windows.zip": "81be692800725a894d8668b4aee883a508855bb52756ed2fab4856145a075980",
+    "OdooAddonMigrator_Setup.exe": "99309e80fc9d74cf2582e429425d884741ab65dfff8197a87f901bbc6c240a79"
   },
   "community_brain": {
     "anchor_transitions": 84699,
@@ -110,11 +110,11 @@
     },
     "view_transitions": 17319
   },
-  "created_at": "2026-10-07T10:48:06.055496+00:00",
+  "created_at": "2026-10-07T19:20:51.362532+00:00",
   "effective_database_compatibility_validated": false,
   "enterprise_overlay_included": false,
   "platform": "windows-x86_64",
-  "release_build_revision": "search-group-attributes-fix",
+  "release_build_revision": "settings-layout-fix",
   "toolchain": {
     "inno_setup": "6.7.3",
     "pyinstaller": "6.22.3",
@@ -124,7 +124,7 @@
   "validation": {
     "full_suite": {
       "failed": 0,
-      "passed": 280,
+      "passed": 298,
       "warnings": 1
     },
     "installed_payload_acceptance": {
@@ -141,7 +141,10 @@
       "passed": 103
     },
     "packaged_rule_bytecode_verified": true,
-    "packaged_source_rule": "xml.search.group_legacy_attributes_removed.18_to_19",
+    "packaged_source_rules": [
+      "xml.settings.app_layout.16_to_17",
+      "xml.settings.inline_target_removed.18_to_19"
+    ],
     "portable_gui_smoke_exit": 0,
     "public_source_free_smoke": {
       "effective_view_validated": false,
@@ -151,12 +154,19 @@
       "source_code_indexed_at_runtime": false
     },
     "real_addon_existing_brain_rule_smoke": {
-      "full_odoo_install": "review_required_settings_xpath",
+      "effective_customer_database_validated": false,
+      "full_odoo_install": "blocked_missing_custom_group_xml_id_in_menu",
       "input_unchanged": true,
       "passed": true,
+      "settings_view_and_action_validated_in_odoo19": true,
       "static_validation": "passed"
     },
     "runtime_deterministic_allowlist_verified": true,
+    "settings_rule_tests": {
+      "input_unchanged": true,
+      "older_brain_compatible": true,
+      "targeted_passed": 83
+    },
     "zip_brain_hash_verified": true
   },
   "version": "1.0.5",

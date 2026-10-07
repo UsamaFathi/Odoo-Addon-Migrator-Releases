@@ -1,8 +1,8 @@
 {
-  "application_source_commit": "26a994cd3e25b9b5ec2504a48f7c5e26a6e72664",
+  "application_source_commit": "e86741b6a0f64eaccbc7a50951cd81938a47ede9",
   "asset_sha256": {
-    "OdooAddonMigrator-Ubuntu-x86_64.tar.gz": "d1f641781f76bf6c2c85d4ce80aa6136a346350145aa6e519c45c6c20109a0f4",
-    "OdooAddonMigrator_1.0.5_amd64.deb": "ca4b0926b7ce9c1d4fc73503977a42cc3c33bdd9d7f47d4b96ed161706133c77"
+    "OdooAddonMigrator-Ubuntu-x86_64.tar.gz": "668b3edc6f0308b3eebd2f4dbc3483be9fd483dec0a7559accf3dc33bab2fc3a",
+    "OdooAddonMigrator_1.0.5_amd64.deb": "642a36f26dd957d988fff250e11dfbc719118af03a05ae2015eccabe174cad78"
   },
   "build_environment": {
     "acceleration": "WHPX",
@@ -20,11 +20,11 @@
     "schema": 5,
     "sha256": "dd633d8ce8e1a2204c50fe1df742bc9a2bf2d36baa8c1aa31c6e4107d433afa7"
   },
-  "created_at": "2026-10-07T11:01:59.627924+00:00",
+  "created_at": "2026-10-07T19:22:41.289787+00:00",
   "effective_database_compatibility_validated": false,
   "enterprise_overlay_included": false,
   "platform": "ubuntu-22.04-amd64",
-  "release_build_revision": "search-group-attributes-fix",
+  "release_build_revision": "settings-layout-fix",
   "resources": {
     "measurement_build": "initial_v1_0_5_before_folder_scan_fix",
     "recommended_ram_gib": 8,
@@ -39,7 +39,7 @@
     "debian_installation": "passed",
     "full_suite": {
       "failed": 0,
-      "passed": 280,
+      "passed": 298,
       "skipped": 0
     },
     "installed_offscreen_gui": "passed",
@@ -47,7 +47,16 @@
     "package_removal": "passed",
     "packaged_rule_bytecode_verified": true,
     "portable_smoke": "passed",
+    "real_addon_install": {
+      "effective_customer_database_validated": false,
+      "full_odoo_install": "blocked_missing_custom_group_xml_id_in_menu",
+      "settings_view_and_action_validated_in_odoo19": true
+    },
     "runtime_deterministic_allowlist_verified": true,
+    "settings_rule_tests": {
+      "input_unchanged": true,
+      "older_brain_compatible": true
+    },
     "source_free_smoke": {
       "effective_view_validated": false,
       "input_unchanged": true,
@@ -56,7 +65,7 @@
       "source_code_indexed_at_runtime": false
     }
   },
-  "validation_source_snapshot_commit": "52f2446cc1e681e8a0ec885e82e114075276028e",
+  "validation_source_snapshot_commit": "11489ce17808e446916d7d4b2bb1ea20045c739f",
   "version": "1.0.5",
   "view_anchor_suggestions": "review_only"
 }

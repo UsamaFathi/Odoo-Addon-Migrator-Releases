@@ -1,5 +1,17 @@
 # Odoo Addon Migrator v1.0.5 - Ubuntu x86_64
 
+The latest rebuild fixes canonical legacy `res.config.settings` app insertions:
+complete named app blocks inserted inside the removed `div.settings` move to
+named `app` nodes inside `//form`. Inner fields, labels, help, modifiers and
+layout are preserved. Partial/ambiguous inheritance operations remain for review.
+Literal settings-form actions also migrate the removed Odoo 19 `inline` target
+to `current`. Both rules work with existing trained Brains; no retraining is
+required. Manifests identify `settings-layout-fix` and code commit `e86741b`.
+
+The real-addon install check validated its settings view and action, then stopped
+later on a separate missing custom security-group XML ID in a menu. This is not
+a full addon-installation pass or effective customer-database validation.
+
 The latest v1.0.5 rebuild fixes Odoo 19 search-view validation by removing
 legacy `expand` and `string` attributes from search-view groups. Legacy
 boolean `attrs` modifiers and quoted values containing `>` are converted
@@ -20,7 +32,7 @@ Includes the same schema-v5 Community Brain as Windows v1.0.5:
 17,319 view profiles and 84,699 anchor transitions. Enterprise overlays are
 separate local-authorized artifacts and are not included.
 
-Validation: 280 tests passed in Ubuntu 22.04.5. The portable application,
+Validation: 298 tests passed in Ubuntu 22.04.5. The portable application,
 Debian installation in an isolated cached Ubuntu VM, installed offscreen and
 X11 GUI smoke tests, and package removal passed. Source-free Community
 15->19 migration preserved its input and did not index Odoo source.
