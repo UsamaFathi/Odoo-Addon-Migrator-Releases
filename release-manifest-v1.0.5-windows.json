@@ -1,8 +1,8 @@
 {
-  "application_source_commit": "52bdd7d1d6839e0bd96645e6df79d6fbaf8960b5",
+  "application_source_commit": "0c3e4074d9cab5e1d513863107b398ac332f3225",
   "asset_sha256": {
-    "OdooAddonMigrator-Windows.zip": "6fda6d66868f055d631e7c54d10bd3834ad43cd006fadbfcd26da09bfb2d8dc5",
-    "OdooAddonMigrator_Setup.exe": "4da322e897e3d99d61c325519d9f7278a004156f3524ffe625ecbbfe722758ce"
+    "OdooAddonMigrator_Setup.exe": "52a759acc4e31cc40663de2be4a8658846a3ff2a34cb3219d715c91b81fc2fba",
+    "OdooAddonMigrator-Windows.zip": "2b9549bcc2899607ad425566305a8a5eec5b019ca76a4bb5732fdf1f50c8a66d"
   },
   "community_brain": {
     "anchor_transitions": 84699,
@@ -110,7 +110,7 @@
     },
     "view_transitions": 17319
   },
-  "created_at": "2026-10-06T18:04:07.097221+00:00",
+  "created_at": "2026-10-07T08:26:47.051143+00:00",
   "effective_database_compatibility_validated": false,
   "enterprise_overlay_included": false,
   "platform": "windows-x86_64",
@@ -122,18 +122,9 @@
   },
   "validation": {
     "full_suite": {
+      "passed": 277,
       "failed": 0,
-      "passed": 274,
       "warnings": 1
-    },
-    "installer": {
-      "community_hash_verified": true,
-      "enterprise_overlay_absent": true,
-      "installed_smoke_exit": 0,
-      "installed_version": "1.0.5",
-      "installer_exit": 0,
-      "uninstall_exit": 0,
-      "uninstall_verified": true
     },
     "owner_training_regressions": {
       "failed": 0,
@@ -147,8 +138,19 @@
       "review_findings": 4,
       "source_code_indexed_at_runtime": false
     },
-    "zip_brain_hash_verified": true
+    "zip_brain_hash_verified": true,
+    "installed_payload_acceptance": {
+      "installed_folder_selection_smoke": "passed",
+      "installed_payload_verified": true,
+      "loose_source_files_required": false,
+      "uninstall": "passed",
+      "test_app_id_used": true,
+      "original_installation_unchanged": true
+    },
+    "portable_folder_selection_smoke": "passed",
+    "loose_indexer_source_file_absent": true
   },
   "version": "1.0.5",
-  "view_anchor_suggestions": "review_only"
+  "view_anchor_suggestions": "review_only",
+  "release_build_revision": "frozen-folder-scan-fix"
 }

@@ -1,5 +1,9 @@
 # Odoo Addon Migrator v1.0.5 - Windows
 
+Rebuilt v1.0.5 fixes the missing `sources/indexer.py` error when selecting a
+custom addons folder. Frozen builds identify the indexer from bundled bytecode
+and do not require loose application source files. The trained Brain is unchanged.
+
 View Intelligence adds structural migration analysis for inherited Odoo views
 across the supported 14 -> 15 -> 16 -> 17 -> 18 -> 19 path.
 
@@ -28,9 +32,7 @@ Windows assets: installer, portable ZIP, SHA-256 checksums and release manifest.
 Ubuntu v1.0.5 is not published from this Windows build; its existing release
 remains unchanged.
 
-Validation: 274 tests passed with one existing deprecation warning; the owner's
-training regression corpus passed 103 tests. Portable and installed GUI smoke
-tests, silent installation and uninstallation passed. A source-free Community
-15->19 migration smoke preserved its input and produced review findings.
-
-The installer is unsigned. Independent migration utility; not affiliated with Odoo S.A.
+Validation for this rebuild: 277 tests passed (one existing deprecation warning).
+The portable executable and an isolated installation of the identical payload
+passed the actual folder-selection/scan smoke without loose indexer source.
+The existing user installation was left unchanged.
