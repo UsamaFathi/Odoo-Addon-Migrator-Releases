@@ -1,8 +1,8 @@
 {
-  "application_source_commit": "0c3e4074d9cab5e1d513863107b398ac332f3225",
+  "application_source_commit": "26a994cd3e25b9b5ec2504a48f7c5e26a6e72664",
   "asset_sha256": {
-    "OdooAddonMigrator_Setup.exe": "52a759acc4e31cc40663de2be4a8658846a3ff2a34cb3219d715c91b81fc2fba",
-    "OdooAddonMigrator-Windows.zip": "2b9549bcc2899607ad425566305a8a5eec5b019ca76a4bb5732fdf1f50c8a66d"
+    "OdooAddonMigrator-Windows.zip": "2210a1862c9658b98afc054de62315b332d784c3aafc21477fc48c8a6c9c5821",
+    "OdooAddonMigrator_Setup.exe": "8a163eb19f4fc73ba39bc706744ba7abfdc646051c7c2009106e2c957338b6ca"
   },
   "community_brain": {
     "anchor_transitions": 84699,
@@ -110,10 +110,11 @@
     },
     "view_transitions": 17319
   },
-  "created_at": "2026-10-07T08:26:47.051143+00:00",
+  "created_at": "2026-10-07T10:48:06.055496+00:00",
   "effective_database_compatibility_validated": false,
   "enterprise_overlay_included": false,
   "platform": "windows-x86_64",
+  "release_build_revision": "search-group-attributes-fix",
   "toolchain": {
     "inno_setup": "6.7.3",
     "pyinstaller": "6.22.3",
@@ -122,14 +123,25 @@
   },
   "validation": {
     "full_suite": {
-      "passed": 277,
       "failed": 0,
+      "passed": 280,
       "warnings": 1
     },
+    "installed_payload_acceptance": {
+      "installed_folder_selection_smoke": "passed",
+      "installed_payload_verified": true,
+      "loose_source_files_required": false,
+      "original_installation_unchanged": true,
+      "test_app_id_used": true,
+      "uninstall": "passed"
+    },
+    "loose_indexer_source_file_absent": true,
     "owner_training_regressions": {
       "failed": 0,
       "passed": 103
     },
+    "packaged_rule_bytecode_verified": true,
+    "packaged_source_rule": "xml.search.group_legacy_attributes_removed.18_to_19",
     "portable_gui_smoke_exit": 0,
     "public_source_free_smoke": {
       "effective_view_validated": false,
@@ -138,19 +150,15 @@
       "review_findings": 4,
       "source_code_indexed_at_runtime": false
     },
-    "zip_brain_hash_verified": true,
-    "installed_payload_acceptance": {
-      "installed_folder_selection_smoke": "passed",
-      "installed_payload_verified": true,
-      "loose_source_files_required": false,
-      "uninstall": "passed",
-      "test_app_id_used": true,
-      "original_installation_unchanged": true
+    "real_addon_existing_brain_rule_smoke": {
+      "full_odoo_install": "review_required_settings_xpath",
+      "input_unchanged": true,
+      "passed": true,
+      "static_validation": "passed"
     },
-    "portable_folder_selection_smoke": "passed",
-    "loose_indexer_source_file_absent": true
+    "runtime_deterministic_allowlist_verified": true,
+    "zip_brain_hash_verified": true
   },
   "version": "1.0.5",
-  "view_anchor_suggestions": "review_only",
-  "release_build_revision": "frozen-folder-scan-fix"
+  "view_anchor_suggestions": "review_only"
 }

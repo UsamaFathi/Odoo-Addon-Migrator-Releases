@@ -1,8 +1,8 @@
 {
-  "application_source_commit": "0c3e4074d9cab5e1d513863107b398ac332f3225",
+  "application_source_commit": "26a994cd3e25b9b5ec2504a48f7c5e26a6e72664",
   "asset_sha256": {
-    "OdooAddonMigrator_1.0.5_amd64.deb": "ba37b22211d3a721ebcfcc37fd7c80e3b00b72ff1d18f60283788670b4533e30",
-    "OdooAddonMigrator-Ubuntu-x86_64.tar.gz": "aa133ce191121861f914dd9d1b112605fbaeee7b407c6f2022ea3bcc184b25ae"
+    "OdooAddonMigrator-Ubuntu-x86_64.tar.gz": "d1f641781f76bf6c2c85d4ce80aa6136a346350145aa6e519c45c6c20109a0f4",
+    "OdooAddonMigrator_1.0.5_amd64.deb": "ca4b0926b7ce9c1d4fc73503977a42cc3c33bdd9d7f47d4b96ed161706133c77"
   },
   "build_environment": {
     "acceleration": "WHPX",
@@ -20,40 +20,43 @@
     "schema": 5,
     "sha256": "dd633d8ce8e1a2204c50fe1df742bc9a2bf2d36baa8c1aa31c6e4107d433afa7"
   },
+  "created_at": "2026-10-07T11:01:59.627924+00:00",
   "effective_database_compatibility_validated": false,
   "enterprise_overlay_included": false,
   "platform": "ubuntu-22.04-amd64",
+  "release_build_revision": "search-group-attributes-fix",
   "resources": {
+    "measurement_build": "initial_v1_0_5_before_folder_scan_fix",
     "recommended_ram_gib": 8,
     "startup_elapsed_seconds": 38.15,
     "startup_maximum_resident_kib": 2247280,
     "two_gib_vm_startup": "failed_out_of_memory",
-    "validated_vm_ram_mib": 4096,
-    "measurement_build": "initial_v1_0_5_before_folder_scan_fix"
+    "validated_vm_ram_mib": 4096
   },
   "validation": {
-    "clean_ubuntu_deb_install": "passed",
+    "acceptance_environment": "cached isolated Ubuntu 22.04.5 build VM",
+    "archive_brain_hash_verified": true,
+    "debian_installation": "passed",
     "full_suite": {
-      "passed": 277,
       "failed": 0,
+      "passed": 280,
       "skipped": 0
     },
     "installed_offscreen_gui": "passed",
     "installed_x11_gui": "passed",
     "package_removal": "passed",
+    "packaged_rule_bytecode_verified": true,
     "portable_smoke": "passed",
+    "runtime_deterministic_allowlist_verified": true,
     "source_free_smoke": {
       "effective_view_validated": false,
       "input_unchanged": true,
       "path": "15->16->17->18->19",
       "review_findings": 4,
       "source_code_indexed_at_runtime": false
-    },
-    "portable_folder_selection_smoke": "passed",
-    "installed_folder_selection_smoke": "passed"
+    }
   },
-  "validation_source_snapshot_commit": "d186e5fc3e452b4064d46dfb46ab0668d8fb6c52",
+  "validation_source_snapshot_commit": "52f2446cc1e681e8a0ec885e82e114075276028e",
   "version": "1.0.5",
-  "view_anchor_suggestions": "review_only",
-  "release_build_revision": "frozen-folder-scan-fix"
+  "view_anchor_suggestions": "review_only"
 }

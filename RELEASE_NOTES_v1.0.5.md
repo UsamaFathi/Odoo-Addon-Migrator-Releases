@@ -1,5 +1,12 @@
 # Odoo Addon Migrator v1.0.5 - Windows
 
+The latest v1.0.5 rebuild fixes Odoo 19 search-view validation by removing
+legacy `expand` and `string` attributes from search-view groups. Legacy
+boolean `attrs` modifiers and quoted values containing `>` are converted
+correctly. No Brain retraining is required; schema 5 and the Community
+fingerprint are unchanged. Download fresh files, reinstall and rerun migration
+into a new output folder. Inherited XPath review findings still need resolution.
+
 Rebuilt v1.0.5 fixes the missing `sources/indexer.py` error when selecting a
 custom addons folder. Frozen builds identify the indexer from bundled bytecode
 and do not require loose application source files. The trained Brain is unchanged.
@@ -29,10 +36,9 @@ Static validation is not runtime compatibility proof. Test migrated addons in
 the target Odoo environment and inspect its effective inherited views.
 
 Windows assets: installer, portable ZIP, SHA-256 checksums and release manifest.
-Ubuntu v1.0.5 is not published from this Windows build; its existing release
-remains unchanged.
+Ubuntu uses a separate platform build and release tag.
 
-Validation for this rebuild: 277 tests passed (one existing deprecation warning).
+Validation for this rebuild: 280 tests passed (one existing deprecation warning).
 The portable executable and an isolated installation of the identical payload
 passed the actual folder-selection/scan smoke without loose indexer source.
 The existing user installation was left unchanged.

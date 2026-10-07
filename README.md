@@ -4,7 +4,7 @@ Public desktop releases for **Odoo Addon Migrator**.
 
 Current corrected releases: **[Windows v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows)** and **[Ubuntu v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-ubuntu)**.
 
-Both packages were rebuilt to fix the missing `sources/indexer.py` error on custom-addon folder selection. Frozen cache keys use bundled bytecode. Download fresh files and reinstall; the displayed version remains 1.0.5. All corrected asset checksums are verified.
+The latest rebuild fixes Odoo 19 search-view group attributes and legacy `attrs` conversion, and retains the earlier folder-selection fix. The trained Brain is unchanged; **no retraining is required**. Download fresh files, reinstall and rerun migration into a new output folder. The displayed version remains 1.0.5; manifests identify the new build as `search-group-attributes-fix`.
 
 The Windows v1.0.5 installer and portable ZIP are rebuilt, tested and published. The folder-selection cache no longer requires loose Python source files.
 
@@ -20,7 +20,7 @@ The packaged migration knowledge contains derived compatibility data only and do
 
 Windows v1.0.5 adds structural View Intelligence with a retrained schema-v5 Community Brain. It analyzes moved, hidden, replaced and fragile inherited-view anchors and suggests candidates for review without speculative XML replacement. Canonical source support does not prove effective database view compatibility. Historical release notes remain in this repository.
 
-Ubuntu v1.0.5 is published with the identical Community Brain. All 277 tests passed; clean installation, offscreen/X11 GUI startup and removal were verified in Ubuntu 22.04.5.
+Ubuntu v1.0.5 uses the identical Community Brain. All 280 tests passed on both platforms; isolated installation, offscreen/X11 GUI startup and removal were verified in Ubuntu 22.04.5. The Windows installer and portable folder-selection smoke tests passed as well.
 
 [Download Ubuntu v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-ubuntu). Tested in a 4 GB VM; 8 GB RAM is recommended. A 2 GB VM was insufficient. See its release notes for CPU requirements and measured startup memory/time.
 
