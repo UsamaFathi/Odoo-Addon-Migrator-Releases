@@ -1,0 +1,55 @@
+{
+  "application_source_commit": "f627cc2b7c4c48bd6d1956315056c12d713bb154",
+  "asset_sha256": {
+    "OdooAddonMigrator-Ubuntu-x86_64.tar.gz": "bb1cf9486bcf53f9b7ea3005e25ab482babeaad38414f20467c60418fb4ded06",
+    "OdooAddonMigrator_1.0.5_amd64.deb": "7cd8037849d473791f02c28801f7e09a8a2d3d1d539eacd37115643141647604"
+  },
+  "build_environment": {
+    "acceleration": "WHPX",
+    "actions_used": false,
+    "os": "Ubuntu 22.04.5 LTS",
+    "pyinstaller": "6.22.3",
+    "pyside6": "6.11.2",
+    "python": "3.10.12",
+    "qemu": "11.1.0",
+    "ubuntu_image_sha256": "bd27c6f51053dd7e59bcbe6016c6fa853f54b1e423af12273ff46a5176bfbf41"
+  },
+  "community_brain": {
+    "fingerprint": "382a990e813851f28a43d25613d84794f3e20398483f97db9b3d803dcef8939a",
+    "matches_windows_v1_0_5": true,
+    "schema": 5,
+    "sha256": "dd633d8ce8e1a2204c50fe1df742bc9a2bf2d36baa8c1aa31c6e4107d433afa7"
+  },
+  "effective_database_compatibility_validated": false,
+  "enterprise_overlay_included": false,
+  "platform": "ubuntu-22.04-amd64",
+  "resources": {
+    "recommended_ram_gib": 8,
+    "startup_elapsed_seconds": 38.15,
+    "startup_maximum_resident_kib": 2247280,
+    "two_gib_vm_startup": "failed_out_of_memory",
+    "validated_vm_ram_mib": 4096
+  },
+  "validation": {
+    "clean_ubuntu_deb_install": "passed",
+    "full_suite": {
+      "failed": 0,
+      "passed": 274,
+      "skipped": 0
+    },
+    "installed_offscreen_gui": "passed",
+    "installed_x11_gui": "passed",
+    "package_removal": "passed",
+    "portable_smoke": "passed",
+    "source_free_smoke": {
+      "effective_view_validated": false,
+      "input_unchanged": true,
+      "path": "15->16->17->18->19",
+      "review_findings": 4,
+      "source_code_indexed_at_runtime": false
+    }
+  },
+  "validation_source_snapshot_commit": "d186e5fc3e452b4064d46dfb46ab0668d8fb6c52",
+  "version": "1.0.5",
+  "view_anchor_suggestions": "review_only"
+}
