@@ -2,13 +2,13 @@
 
 Public desktop releases for **Odoo Addon Migrator**.
 
-Latest downloadable release: **Ubuntu v1.0.5 x86_64**. The previously published Windows v1.0.5 release is currently unavailable; its validated build files are retained.
+Latest downloadable release: **Ubuntu v1.0.5 x86_64**. Ubuntu is the only public release, as requested by the owner.
 
-Windows publication status is being checked with the owner. Its former public release URL currently returns 404.
+Windows build files are retained locally. No Windows release is currently offered; historical Windows notes remain for reference.
 
 Odoo Addon Migrator helps developers migrate custom Odoo addons across supported versions from **Odoo 14 through Odoo 19** while keeping the original addon folder unchanged.
 
-The Windows and Ubuntu v1.0.5 desktop packages include **Community migration knowledge**. Enterprise overlays remain separate artifacts for local authorized use and are not distributed in this release. End users select only their custom addons and migration versions; no Odoo source checkout, Enterprise source folder, training step, or runtime source indexing is required.
+The Ubuntu v1.0.5 desktop package includes **Community migration knowledge**. Enterprise overlays remain separate artifacts for local authorized use and are not distributed in this release. End users select only their custom addons and migration versions; no Odoo source checkout, Enterprise source folder, training step, or runtime source indexing is required.
 
 The public desktop interface is intentionally simplified: Official Odoo source management, Community/Enterprise source paths, and Migration Brain controls are not exposed to end users. The Project page remains clean and scrollable while the bundled migration knowledge works internally.
 
@@ -24,23 +24,7 @@ Ubuntu v1.0.5 is published with the identical Community Brain. All 274 tests pas
 
 ## Downloads
 
-Platform packages use separate GitHub Releases. Availability is reported independently for Windows and Ubuntu.
-
-### Windows release
-
-Release tag format:
-
-`v<version>-windows`
-
-For v1.0.5:
-
-`v1.0.5-windows`
-
-Assets:
-
-- `OdooAddonMigrator_Setup.exe` — recommended Windows installer.
-- `OdooAddonMigrator-Windows.zip` ? portable application.
-- `SHA256SUMS-Windows.txt` and `release-manifest.json` ? checksums and validation.
+The current public package is Ubuntu x86_64.
 
 ### Ubuntu x86_64 release
 
@@ -66,7 +50,7 @@ sudo apt install ./OdooAddonMigrator_1.0.5_amd64.deb
 
 ## What is bundled
 
-Windows and Ubuntu v1.0.5 include:
+Ubuntu v1.0.5 includes:
 
 - Community migration knowledge for Odoo 14 through Odoo 19.
 - The desktop migration engine and static validation workflow.
