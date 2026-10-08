@@ -1,8 +1,8 @@
 {
-  "application_source_commit": "e86741b6a0f64eaccbc7a50951cd81938a47ede9",
+  "application_source_commit": "450ec4d22417854152128be26caf8011f4a7eb2a",
   "asset_sha256": {
-    "OdooAddonMigrator-Windows.zip": "81be692800725a894d8668b4aee883a508855bb52756ed2fab4856145a075980",
-    "OdooAddonMigrator_Setup.exe": "99309e80fc9d74cf2582e429425d884741ab65dfff8197a87f901bbc6c240a79"
+    "OdooAddonMigrator-Windows.zip": "a4c38e27f6112ca2dd94e86fb526259b996410f6e0c995782b1384d331023b71",
+    "OdooAddonMigrator_Setup.exe": "33176dd81ce10a2aeb595e8c5ffcd9c9fe7b0446ef0d64c1b66a50e080043a5e"
   },
   "community_brain": {
     "anchor_transitions": 84699,
@@ -110,11 +110,11 @@
     },
     "view_transitions": 17319
   },
-  "created_at": "2026-10-07T19:20:51.362532+00:00",
+  "created_at": "2026-10-08T07:52:24.101710+00:00",
   "effective_database_compatibility_validated": false,
   "enterprise_overlay_included": false,
   "platform": "windows-x86_64",
-  "release_build_revision": "settings-layout-fix",
+  "release_build_revision": "module-identity-fix",
   "toolchain": {
     "inno_setup": "6.7.3",
     "pyinstaller": "6.22.3",
@@ -124,7 +124,7 @@
   "validation": {
     "full_suite": {
       "failed": 0,
-      "passed": 298,
+      "passed": 314,
       "warnings": 1
     },
     "installed_payload_acceptance": {
@@ -136,10 +136,21 @@
       "uninstall": "passed"
     },
     "loose_indexer_source_file_absent": true,
+    "module_identity": {
+      "collisions_and_traversal_rejected": true,
+      "detection": true,
+      "explicit_choice": true,
+      "gui_keyboard_and_cancel": "passed",
+      "gui_visual_review": "passed",
+      "no_xml_id_rewrites": true,
+      "premium_ui_static_audit": "passed",
+      "single_addon_container": true
+    },
     "owner_training_regressions": {
       "failed": 0,
       "passed": 103
     },
+    "packaged_module_identity_verified": true,
     "packaged_rule_bytecode_verified": true,
     "packaged_source_rules": [
       "xml.settings.app_layout.16_to_17",
@@ -154,11 +165,12 @@
       "source_code_indexed_at_runtime": false
     },
     "real_addon_existing_brain_rule_smoke": {
-      "effective_customer_database_validated": false,
-      "full_odoo_install": "blocked_missing_custom_group_xml_id_in_menu",
+      "customer_database_and_business_workflows_tested": false,
+      "explicit_technical_name": true,
+      "full_odoo_install": "passed_isolated_odoo19",
       "input_unchanged": true,
+      "manager_group_resolved": true,
       "passed": true,
-      "settings_view_and_action_validated_in_odoo19": true,
       "static_validation": "passed"
     },
     "runtime_deterministic_allowlist_verified": true,

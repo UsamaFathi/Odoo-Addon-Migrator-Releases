@@ -1,8 +1,8 @@
 {
-  "application_source_commit": "e86741b6a0f64eaccbc7a50951cd81938a47ede9",
+  "application_source_commit": "450ec4d22417854152128be26caf8011f4a7eb2a",
   "asset_sha256": {
-    "OdooAddonMigrator-Ubuntu-x86_64.tar.gz": "668b3edc6f0308b3eebd2f4dbc3483be9fd483dec0a7559accf3dc33bab2fc3a",
-    "OdooAddonMigrator_1.0.5_amd64.deb": "642a36f26dd957d988fff250e11dfbc719118af03a05ae2015eccabe174cad78"
+    "OdooAddonMigrator-Ubuntu-x86_64.tar.gz": "7ae508a244c0f48b7f66c9c8d37c688b7e34ea70507fbb8cb8cb4efddf9fb8a2",
+    "OdooAddonMigrator_1.0.5_amd64.deb": "b8dd3d70a514a68fdffff3e5b273bf07918b5410cb4b0f2ee25502b916969e78"
   },
   "build_environment": {
     "acceleration": "WHPX",
@@ -20,11 +20,11 @@
     "schema": 5,
     "sha256": "dd633d8ce8e1a2204c50fe1df742bc9a2bf2d36baa8c1aa31c6e4107d433afa7"
   },
-  "created_at": "2026-10-07T19:22:41.289787+00:00",
+  "created_at": "2026-10-08T07:55:25.229422+00:00",
   "effective_database_compatibility_validated": false,
   "enterprise_overlay_included": false,
   "platform": "ubuntu-22.04-amd64",
-  "release_build_revision": "settings-layout-fix",
+  "release_build_revision": "module-identity-fix",
   "resources": {
     "measurement_build": "initial_v1_0_5_before_folder_scan_fix",
     "recommended_ram_gib": 8,
@@ -39,18 +39,21 @@
     "debian_installation": "passed",
     "full_suite": {
       "failed": 0,
-      "passed": 298,
+      "passed": 314,
       "skipped": 0
     },
     "installed_offscreen_gui": "passed",
     "installed_x11_gui": "passed",
     "package_removal": "passed",
+    "packaged_module_identity_verified": true,
     "packaged_rule_bytecode_verified": true,
     "portable_smoke": "passed",
     "real_addon_install": {
-      "effective_customer_database_validated": false,
-      "full_odoo_install": "blocked_missing_custom_group_xml_id_in_menu",
-      "settings_view_and_action_validated_in_odoo19": true
+      "customer_database_and_business_workflows_tested": false,
+      "explicit_technical_name": true,
+      "full_odoo_install": "passed_isolated_odoo19",
+      "input_unchanged": true,
+      "manager_group_resolved": true
     },
     "runtime_deterministic_allowlist_verified": true,
     "settings_rule_tests": {
@@ -65,7 +68,7 @@
       "source_code_indexed_at_runtime": false
     }
   },
-  "validation_source_snapshot_commit": "11489ce17808e446916d7d4b2bb1ea20045c739f",
+  "validation_source_snapshot_commit": "c1ed6bc4f4b7067a29c571047a284a9ded6905a1",
   "version": "1.0.5",
   "view_anchor_suggestions": "review_only"
 }

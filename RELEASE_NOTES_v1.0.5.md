@@ -1,16 +1,33 @@
 # Odoo Addon Migrator v1.0.5 - Windows
 
-The latest rebuild fixes canonical legacy `res.config.settings` app insertions:
+The latest rebuild adds an explicit technical addon-name review when a version-suffixed
+folder still refers to locally declared XML IDs under its original namespace.
+Confirm the intended name before migration. Only the output copy's folder name
+changes; XML IDs, Python references and permissions are not speculatively rewritten.
+Single-addon selections now produce an output container containing the addon folder.
+Ambiguous ownership remains for review. The original addon tree is unchanged.
+
+Manifests identify `module-identity-fix`, application commit `450ec4d`, and
+314 passing tests on each platform. Existing settings, search-view, attrs and
+folder-selection fixes are retained. The schema-v5 Brain and Enterprise overlay
+binding are unchanged; no retraining is required. Download fresh files, reinstall
+and rerun migration into a new output folder.
+
+A fresh migrated addon with an explicitly selected original technical name
+installed successfully in isolated Odoo 19, including resolution of its manager
+group XML ID. Customer database upgrades and business workflows were not tested.
+
+The earlier settings rebuild fixes canonical legacy `res.config.settings` app insertions:
 complete named app blocks inserted inside the removed `div.settings` move to
 named `app` nodes inside `//form`. Inner fields, labels, help, modifiers and
 layout are preserved. Partial/ambiguous inheritance operations remain for review.
 Literal settings-form actions also migrate the removed Odoo 19 `inline` target
 to `current`. Both rules work with existing trained Brains; no retraining is
-required. Manifests identify `settings-layout-fix` and code commit `e86741b`.
+required. Those settings rules were introduced in code commit `e86741b`.
 
-The real-addon install check validated its settings view and action, then stopped
-later on a separate missing custom security-group XML ID in a menu. This is not
-a full addon-installation pass or effective customer-database validation.
+The earlier settings-only install check stopped later on a custom namespace
+mismatch. The explicitly selected-name install check described above supersedes
+that result; it does not validate every customer database composition.
 
 The latest v1.0.5 rebuild fixes Odoo 19 search-view validation by removing
 legacy `expand` and `string` attributes from search-view groups. Legacy
@@ -50,7 +67,7 @@ the target Odoo environment and inspect its effective inherited views.
 Windows assets: installer, portable ZIP, SHA-256 checksums and release manifest.
 Ubuntu uses a separate platform build and release tag.
 
-Validation for this rebuild: 298 tests passed (one existing deprecation warning).
+Validation for this rebuild: 314 tests passed (one existing deprecation warning).
 The portable executable and an isolated installation of the identical payload
 passed the actual folder-selection/scan smoke without loose indexer source.
 The existing user installation was left unchanged.

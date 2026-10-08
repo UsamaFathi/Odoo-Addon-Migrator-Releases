@@ -4,7 +4,7 @@ Public desktop releases for **Odoo Addon Migrator**.
 
 Current corrected releases: **[Windows v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows)** and **[Ubuntu v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-ubuntu)**.
 
-The latest rebuild adds guarded canonical settings-app layout and action-target corrections, and retains the earlier search-view, attrs and folder-selection fixes. The trained Brain is unchanged; **no retraining is required**. Download fresh files, reinstall and rerun migration into a new output folder. The displayed version remains 1.0.5; manifests identify the new build as `settings-layout-fix`.
+The latest rebuild adds explicit technical addon-name review for version-suffixed folders with stale local XML-ID namespaces. It preserves namespace strings and changes only the selected output folder identity. Earlier settings, search-view, attrs and folder-selection fixes are retained. The trained Brain is unchanged; **no retraining is required**. Download fresh files, reinstall and rerun migration into a new output folder. The displayed version remains 1.0.5; manifests identify the new build as `module-identity-fix`.
 
 The Windows v1.0.5 installer and portable ZIP are rebuilt, tested and published. The folder-selection cache no longer requires loose Python source files.
 
@@ -20,7 +20,7 @@ The packaged migration knowledge contains derived compatibility data only and do
 
 Windows v1.0.5 adds structural View Intelligence with a retrained schema-v5 Community Brain. It analyzes moved, hidden, replaced and fragile inherited-view anchors and suggests candidates for review without speculative XML replacement. Canonical source support does not prove effective database view compatibility. Historical release notes remain in this repository.
 
-Ubuntu v1.0.5 uses the identical Community Brain. All 298 tests passed on both platforms; isolated installation, offscreen/X11 GUI startup and removal were verified in Ubuntu 22.04.5. The Windows installer and portable folder-selection smoke tests passed as well.
+Ubuntu v1.0.5 uses the identical Community Brain. All 314 tests passed on both platforms; isolated installation, offscreen/X11 GUI startup and removal were verified in Ubuntu 22.04.5. The Windows installer and portable folder-selection smoke tests passed as well.
 
 [Download Ubuntu v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-ubuntu). Tested in a 4 GB VM; 8 GB RAM is recommended. A 2 GB VM was insufficient. See its release notes for CPU requirements and measured startup memory/time.
 
@@ -73,7 +73,7 @@ The v1.0.5 build verifies the Community Brain integrity and excludes Enterprise 
 2. Confirm or choose the source Odoo version.
 3. Choose the target Odoo version.
 4. Choose a separate output folder.
-5. Start the migration.
+5. Start the migration and confirm the intended technical addon name if prompted. Single-addon output contains a named addon folder; use its parent as the addons path.
 6. Review the migration report and diff.
 7. Install and test the migrated addons on the target Odoo environment.
 
