@@ -1,7 +1,7 @@
 {
-  "application_source_commit": "e6fb624256915148788e3718dea5fd64fed212bf",
+  "application_source_commit": "8114c95950cca0f39417c0c974b83f43cda2c7c6",
   "asset_sha256": {
-    "OdooAddonMigrator_1.0.6_amd64.deb": "cd8b3d2e1e92dffe4a672efe527d41a852a83f65396fc09a6b163ef77919f5a2"
+    "OdooAddonMigrator_1.0.6_amd64.deb": "e77cd105c612cd8478fe0fe3eaf9ae995fcfa35de00da2cea415deb5ae05821c"
   },
   "community_brain": {
     "anchor_transitions": 84699,
@@ -176,19 +176,31 @@
       }
     }
   },
-  "created_at": "2026-10-10T12:47:36.198595+00:00",
+  "created_at": "2026-10-10T14:00:22.518930+00:00",
   "enterprise_overlay_included": false,
   "installer_only": true,
+  "installer_source_commit": "8114c95950cca0f39417c0c974b83f43cda2c7c6",
   "platform": "ubuntu-22.04-amd64",
-  "release_build_revision": "python-compatibility-trained",
+  "release_build_revision": "filesystem-and-addon-name-fix",
+  "release_label": "v1.0.6 Fixed",
   "source_code_included": false,
   "validation": {
     "actual_odoo_install_corpus": "NOT_RUN",
     "business_workflows_validated": false,
     "folder_selection_smoke": "passed",
+    "frozen_fix_regressions": {
+      "community_hash_verified": true,
+      "enterprise_overlay_included": false,
+      "frozen_copy_regression": "passed",
+      "git_excluded": "passed",
+      "input_unchanged": true,
+      "invalid_name_review_metadata": "passed",
+      "read_only_copy_writable": "passed",
+      "staging_final_rename": "passed"
+    },
     "full_suite": {
       "failed": 0,
-      "passed": 363,
+      "passed": 369,
       "skipped": 0
     },
     "installer_acceptance": {
@@ -207,6 +219,6 @@
       "skipped": 0
     }
   },
-  "validation_source_snapshot_commit": "a594f082b23a33b9aec3a192db315e759f5ab11f",
+  "validation_source_snapshot_commit": "dfa21b859ecb1d13871f4878448fcc02ee82095d",
   "version": "1.0.6"
 }

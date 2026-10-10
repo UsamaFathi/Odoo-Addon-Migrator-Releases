@@ -1,4 +1,20 @@
-# Odoo Addon Migrator v1.0.6 - Ubuntu x86_64
+# Odoo Addon Migrator v1.0.6 Fixed - Ubuntu x86_64
+
+This **v1.0.6 Fixed** build corrects addon-folder naming review and Windows
+staging permissions. The application/package version remains 1.0.6.
+
+- Excludes Git metadata from migrated copies, avoiding repository locks during
+  the final output-directory move.
+- Makes copied read-only files writable without changing original files.
+- Requests an explicit valid technical name for addon folders containing dots,
+  spaces or hyphens; no guessed name or automatic reference rewrite.
+- Retains full error tracebacks and identifies the last reported operation stage.
+- Keeps naming validation readable under Windows dark system defaults.
+
+No retraining is required. The Community Brain is unchanged, and Enterprise
+knowledge remains local only. Both releases contain one installer asset, with
+no portable ZIP/tarball. Close the tool and reinstall the fixed installer even
+if your installed version already says 1.0.6.
 
 Includes the same newly trained schema-v5 Community Brain and Python/View
 Intelligence changes as Windows v1.0.6. Python window-action tree/list conversion
@@ -31,6 +47,6 @@ odoo-addon-migrator
 
 Independent utility, not affiliated with Odoo S.A. Earlier release notes remain in the public repository.
 
-Validated release: 363 application tests passed on this platform; installer startup/removal and packaged Brain integrity passed.
+Validation: 369 application tests passed on this platform; installed startup/removal and frozen fix regressions passed.
 
-SHA256 (`OdooAddonMigrator_1.0.6_amd64.deb`): `cd8b3d2e1e92dffe4a672efe527d41a852a83f65396fc09a6b163ef77919f5a2`
+SHA256 (`OdooAddonMigrator_1.0.6_amd64.deb`): `e77cd105c612cd8478fe0fe3eaf9ae995fcfa35de00da2cea415deb5ae05821c`

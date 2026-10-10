@@ -1,4 +1,20 @@
-# Odoo Addon Migrator v1.0.6 - Windows
+# Odoo Addon Migrator v1.0.6 Fixed - Windows
+
+This **v1.0.6 Fixed** build corrects addon-folder naming review and Windows
+staging permissions. The application/package version remains 1.0.6.
+
+- Excludes Git metadata from migrated copies, avoiding repository locks during
+  the final output-directory move.
+- Makes copied read-only files writable without changing original files.
+- Requests an explicit valid technical name for addon folders containing dots,
+  spaces or hyphens; no guessed name or automatic reference rewrite.
+- Retains full error tracebacks and identifies the last reported operation stage.
+- Keeps naming validation readable under Windows dark system defaults.
+
+No retraining is required. The Community Brain is unchanged, and Enterprise
+knowledge remains local only. Both releases contain one installer asset, with
+no portable ZIP/tarball. Close the tool and reinstall the fixed installer even
+if your installed version already says 1.0.6.
 
 This release adds guarded Python window-action tree/list conversion, broader
 model-proven method-reference handling and newly trained Community migration
@@ -38,6 +54,6 @@ Odoo install-corpus validation was NOT_RUN during training.
 Installer-only release: no portable ZIP. Independent utility, not affiliated
 with Odoo S.A. Earlier release notes remain in the public repository.
 
-Validated release: 363 application tests passed on this platform; installer startup/removal and packaged Brain integrity passed.
+Validation: 369 application tests passed on this platform; installed startup/removal and frozen fix regressions passed.
 
-SHA256 (`OdooAddonMigrator_Setup.exe`): `2eb347062c214c76d02da7799af6fb97e36e6edb35ee95f93392ff01c805392d`
+SHA256 (`OdooAddonMigrator_Setup.exe`): `23eb3bf29f1588a0211b438d760ae95435863c08860a53c56f634a489eada086`

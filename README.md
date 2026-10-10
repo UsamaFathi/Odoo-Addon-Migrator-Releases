@@ -1,15 +1,15 @@
-# Odoo Addon Migrator — Releases
+# Odoo Addon Migrator â€” Releases
 
 Public desktop releases for Odoo Addon Migrator, an independent migration utility
-for custom addons across **Odoo 14 → 15 → 16 → 17 → 18 → 19**.
+for custom addons across **Odoo 14 â†’ 15 â†’ 16 â†’ 17 â†’ 18 â†’ 19**.
 
-## Download v1.0.6
+## Download v1.0.6 Fixed
 
 - **[Windows installer](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/download/v1.0.6-windows/OdooAddonMigrator_Setup.exe)**
 - **[Ubuntu x86_64 installer](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/download/v1.0.6-ubuntu/OdooAddonMigrator_1.0.6_amd64.deb)**
 
 [Windows release](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.6-windows)
-· [Ubuntu release](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.6-ubuntu)
+Â· [Ubuntu release](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.6-ubuntu)
 
 **v1.0.6 is installer-only.** No portable ZIP or tarball is published. Close the
 application before installing the Windows update. The Windows installer also
@@ -28,7 +28,16 @@ installation and preserved the existing user installation.
 
 ## What changed
 
-- Python window-action `tree` view types now become `list` at the 17→18 step,
+This is the **v1.0.6 Fixed** installer build. Reinstall it even if the version
+shown on your machine is already 1.0.6. Updated checksums identify the fixed files.
+
+- Migrated copies exclude Git metadata and make copied read-only files writable,
+  fixing Windows staging-directory permission failures.
+- Invalid addon folder names now open an explicit technical-name review; original
+  folders and references are preserved.
+- Expanded error details now include full tracebacks and operation stages.
+
+- Python window-action `tree` view types now become `list` at the 17â†’18 step,
   including composed upgrades to Odoo 19.
 - Model-proven method references have broader coverage; unknown aliases,
   dynamic references, private RPC targets and behavior changes remain for review.
@@ -37,13 +46,13 @@ installation and preserved the existing user installation.
 - Existing settings-layout, search-view, attrs, addon identity and folder-scan
   corrections remain included.
 
-All **363 application tests passed on each platform**. Installer startup/removal,
+All **369 application tests passed on each platform**. Installer startup/removal,
 bundled Brain integrity and the packaged runtime modules were checked. Training
 regressions passed 220 tests. Actual Odoo install-corpus validation was NOT_RUN.
 
 Python rename calibration is deliberately conservative and small: 7 accepted
 decisions from 29 trusted held-out groups, with zero observed false suggestions
-and 24.14% coverage. The 18→19 slice accepted 1 of 5. Git-history supervision was
+and 24.14% coverage. The 18â†’19 slice accepted 1 of 5. Git-history supervision was
 not enabled in this run. These figures do not establish support for every method
 rename or business-runtime compatibility. See the platform release notes and
 manifests for validation details.
@@ -67,8 +76,8 @@ review-only; canonical source support does not prove effective database views.
 
 ## Checksums and history
 
-[SHA256 checksums](SHA256SUMS-v1.0.6.txt) ·
-[Windows notes](RELEASE_NOTES_v1.0.6.md) ·
+[SHA256 checksums](SHA256SUMS-v1.0.6.txt) Â·
+[Windows notes](RELEASE_NOTES_v1.0.6.md) Â·
 [Ubuntu notes](RELEASE_NOTES_v1.0.6_UBUNTU.md)
 
 Historical [Windows v1.0.5 notes](RELEASE_NOTES_v1.0.5.md) and
