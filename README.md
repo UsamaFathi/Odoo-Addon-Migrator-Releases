@@ -71,9 +71,8 @@ review-only; canonical source support does not prove effective database views.
 [Windows notes](RELEASE_NOTES_v1.0.6.md) ·
 [Ubuntu notes](RELEASE_NOTES_v1.0.6_UBUNTU.md)
 
-Historical [Windows v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows)
-and [Ubuntu v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-ubuntu)
-remain available with their original artifacts and notes.
+Historical [Windows v1.0.5 notes](RELEASE_NOTES_v1.0.5.md) and
+[Ubuntu v1.0.5 notes](RELEASE_NOTES_v1.0.5_UBUNTU.md) remain in this repository.
 
 ## Feedback
 

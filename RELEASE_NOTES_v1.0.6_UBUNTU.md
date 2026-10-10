@@ -29,7 +29,7 @@ sudo apt install ./OdooAddonMigrator_1.0.6_amd64.deb
 odoo-addon-migrator
 ```
 
-Independent utility, not affiliated with Odoo S.A. Existing v1.0.5 releases remain.
+Independent utility, not affiliated with Odoo S.A. Earlier release notes remain in the public repository.
 
 Validated release: 363 application tests passed on this platform; installer startup/removal and packaged Brain integrity passed.
 

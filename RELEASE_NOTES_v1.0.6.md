@@ -36,7 +36,7 @@ Review findings and test installation/business actions in target Odoo. Actual
 Odoo install-corpus validation was NOT_RUN during training.
 
 Installer-only release: no portable ZIP. Independent utility, not affiliated
-with Odoo S.A. Existing v1.0.5 releases are preserved.
+with Odoo S.A. Earlier release notes remain in the public repository.
 
 Validated release: 363 application tests passed on this platform; installer startup/removal and packaged Brain integrity passed.
 
