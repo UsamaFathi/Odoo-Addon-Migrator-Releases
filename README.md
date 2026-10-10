@@ -1,109 +1,87 @@
 # Odoo Addon Migrator — Releases
 
-Public desktop releases for **Odoo Addon Migrator**.
+Public desktop releases for Odoo Addon Migrator, an independent migration utility
+for custom addons across **Odoo 14 → 15 → 16 → 17 → 18 → 19**.
 
-Current corrected releases: **[Windows v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows)** and **[Ubuntu v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-ubuntu)**.
+## Download v1.0.6
 
-The latest rebuild adds explicit technical addon-name review for version-suffixed folders with stale local XML-ID namespaces. It preserves namespace strings and changes only the selected output folder identity. Earlier settings, search-view, attrs and folder-selection fixes are retained. The trained Brain is unchanged; **no retraining is required**. Download fresh files, reinstall and rerun migration into a new output folder. The displayed version remains 1.0.5; manifests identify the new build as `module-identity-fix`.
+- **[Windows installer](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/download/v1.0.6-windows/OdooAddonMigrator_Setup.exe)**
+- **[Ubuntu x86_64 installer](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/download/v1.0.6-ubuntu/OdooAddonMigrator_1.0.6_amd64.deb)**
 
-The Windows v1.0.5 installer and portable ZIP are rebuilt, tested and published. The folder-selection cache no longer requires loose Python source files.
+[Windows release](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.6-windows)
+· [Ubuntu release](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.6-ubuntu)
 
-Odoo Addon Migrator helps developers migrate custom Odoo addons across supported versions from **Odoo 14 through Odoo 19** while keeping the original addon folder unchanged.
-
-The Windows and Ubuntu v1.0.5 desktop packages include **Community migration knowledge**. Enterprise overlays remain separate artifacts for local authorized use and are not distributed in this release. End users select only their custom addons and migration versions; no Odoo source checkout, Enterprise source folder, training step, or runtime source indexing is required.
-
-The public desktop interface is intentionally simplified: Official Odoo source management, Community/Enterprise source paths, and Migration Brain controls are not exposed to end users. The Project page remains clean and scrollable while the bundled migration knowledge works internally.
-
-The packaged migration knowledge contains derived compatibility data only and does not contain Odoo Community or Enterprise source files.
-
-## Current release status
-
-Windows v1.0.5 adds structural View Intelligence with a retrained schema-v5 Community Brain. It analyzes moved, hidden, replaced and fragile inherited-view anchors and suggests candidates for review without speculative XML replacement. Canonical source support does not prove effective database view compatibility. Historical release notes remain in this repository.
-
-Ubuntu v1.0.5 uses the identical Community Brain. All 314 tests passed on both platforms; isolated installation, offscreen/X11 GUI startup and removal were verified in Ubuntu 22.04.5. The Windows installer and portable folder-selection smoke tests passed as well.
-
-[Download Ubuntu v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-ubuntu). Tested in a 4 GB VM; 8 GB RAM is recommended. A 2 GB VM was insufficient. See its release notes for CPU requirements and measured startup memory/time.
-
-## Downloads
-
-Corrected Windows and Ubuntu packages use separate release tags.
-
-### Windows release
-
-[Download corrected Windows v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows)
-
-- `OdooAddonMigrator_Setup.exe` ? installer; close the app and reinstall.
-- `OdooAddonMigrator-Windows.zip` ? portable application.
-- `SHA256SUMS-Windows.txt` and `release-manifest.json` ? checksums and validation.
-
-### Ubuntu x86_64 release
-
-Release tag format:
-
-`v<version>-ubuntu`
-
-For v1.0.5:
-
-`v1.0.5-ubuntu`
-
-Assets:
-
-- `OdooAddonMigrator_1.0.5_amd64.deb` — recommended Ubuntu package.
-- `OdooAddonMigrator-Ubuntu-x86_64.tar.gz` ? portable application.
-- `SHA256SUMS-Ubuntu.txt` and `release-manifest-ubuntu.json` ? checksums and validation.
-
-Install the Debian package with:
+**v1.0.6 is installer-only.** No portable ZIP or tarball is published. Close the
+application before installing the Windows update. The Windows installer also
+retires stale application package metadata from previous versions.
 
 ```bash
-sudo apt install ./OdooAddonMigrator_1.0.5_amd64.deb
+sudo apt install ./OdooAddonMigrator_1.0.6_amd64.deb
+odoo-addon-migrator
 ```
 
-## What is bundled
+Ubuntu was validated on 22.04.5 x86_64, including installed offscreen/X11 startup
+and removal. SSSE3, SSE4.1, SSE4.2 and POPCNT CPU support is required by bundled Qt.
+8 GB RAM is recommended; earlier acceptance required a 4 GB VM. Startup loads and
+verifies the Brain and can take time. Windows acceptance used an isolated test
+installation and preserved the existing user installation.
 
-Windows and Ubuntu v1.0.5 include:
+## What changed
 
-- Community migration knowledge for Odoo 14 through Odoo 19.
-- The desktop migration engine and static validation workflow.
+- Python window-action `tree` view types now become `list` at the 17→18 step,
+  including composed upgrades to Odoo 19.
+- Model-proven method references have broader coverage; unknown aliases,
+  dynamic references, private RPC targets and behavior changes remain for review.
+- Newly trained schema-v5 Community Brain: 210,564 examples, 17,319 view profiles
+  and 84,699 anchor transitions.
+- Existing settings-layout, search-view, attrs, addon identity and folder-scan
+  corrections remain included.
 
-The v1.0.5 build verifies the Community Brain integrity and excludes Enterprise overlays. Older release notes describe the contents of their respective packages.
+All **363 application tests passed on each platform**. Installer startup/removal,
+bundled Brain integrity and the packaged runtime modules were checked. Training
+regressions passed 220 tests. Actual Odoo install-corpus validation was NOT_RUN.
 
-## Typical workflow
+Python rename calibration is deliberately conservative and small: 7 accepted
+decisions from 29 trusted held-out groups, with zero observed false suggestions
+and 24.14% coverage. The 18→19 slice accepted 1 of 5. Git-history supervision was
+not enabled in this run. These figures do not establish support for every method
+rename or business-runtime compatibility. See the platform release notes and
+manifests for validation details.
 
-1. Select the custom addons folder.
-2. Confirm or choose the source Odoo version.
-3. Choose the target Odoo version.
-4. Choose a separate output folder.
-5. Start the migration and confirm the intended technical addon name if prompted. Single-addon output contains a named addon folder; use its parent as the addons path.
-6. Review the migration report and diff.
-7. Install and test the migrated addons on the target Odoo environment.
+## Normal use
 
-There is no source-management setup step in the public app.
+1. Select your custom addon or containing addons directory.
+2. Choose its actual original Odoo version and the higher target version.
+3. Choose a fresh, separate output directory and start migration.
+4. Confirm the intended technical addon name if prompted.
+5. Review the report/diff and test the migrated addon in target Odoo.
 
-The original custom addon folder is not modified by the migration workflow.
+Single-addon output contains a named addon folder; use its parent as the addons
+path. The original addon tree is not modified. End users do not need Python,
+official Odoo sources, training setup or CUDA to run the desktop tool.
 
-## Feedback and bug reports
+Public packages contain **Community-derived knowledge only**. Enterprise overlays
+remain separate, local-authorized artifacts and are not distributed. Packs contain
+derived facts/model parameters, not raw Odoo source files. View suggestions are
+review-only; canonical source support does not prove effective database views.
 
-We are actively collecting real migration experience to improve compatibility and usability.
+## Checksums and history
 
-Use the repository **Issues** section and choose:
+[SHA256 checksums](SHA256SUMS-v1.0.6.txt) ·
+[Windows notes](RELEASE_NOTES_v1.0.6.md) ·
+[Ubuntu notes](RELEASE_NOTES_v1.0.6_UBUNTU.md)
 
-- **Bug report** for crashes, installation problems, incorrect migrations, or validation problems.
-- **Product feedback** to share migration results, manual fixes that were still required, and UI/workflow feedback.
+Historical [Windows v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-windows)
+and [Ubuntu v1.0.5](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.5-ubuntu)
+remain available with their original artifacts and notes.
 
-Please do **not** post credentials, customer data, proprietary addon source code, private logs containing secrets, or other sensitive information in public issues.
+## Feedback
 
-## Validation and production use
+Use Issues for bug reports or product feedback. Do not post credentials, customer
+data, proprietary addon source, Enterprise source or private logs publicly.
+Static validation is not production compatibility proof; install-test and exercise
+business actions before deployment. The Windows installer may be unsigned and
+Microsoft SmartScreen may display a warning.
 
-Static migration and validation cannot guarantee production compatibility. Always install and test migrated addons on the target Odoo version before using them in production.
-
-The Windows installer may be unsigned, so Microsoft SmartScreen can display a warning.
-
-## Checksums
-
-Stable releases include SHA-256 checksum files so downloaded files can be verified before installation.
-
-## Project note
-
-This repository contains public release files and feedback resources only. Application development is maintained separately.
-
-Odoo Addon Migrator is an independent migration utility and is not affiliated with Odoo S.A.
+This repository contains public release files and feedback resources. Application
+development is maintained separately. Not affiliated with Odoo S.A.

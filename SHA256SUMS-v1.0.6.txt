@@ -1,0 +1,2 @@
+2eb347062c214c76d02da7799af6fb97e36e6edb35ee95f93392ff01c805392d  OdooAddonMigrator_Setup.exe
+cd8b3d2e1e92dffe4a672efe527d41a852a83f65396fc09a6b163ef77919f5a2  OdooAddonMigrator_1.0.6_amd64.deb
