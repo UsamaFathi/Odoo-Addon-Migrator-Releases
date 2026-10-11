@@ -28,6 +28,17 @@ installation and preserved the existing user installation.
 
 ## What changed
 
+The latest **v1.0.6 Fixed** installers also correct list-column visibility and
+standard form chatter:
+
+- At 16->17, proven static/context-only list-field visibility becomes
+  `column_invisible`; record-dependent conditions and ambiguous selectors stay
+  for review.
+- At 17->18, complete standard chatter blocks become `<chatter/>`. Custom content,
+  options and old chatter XPath anchors remain for review.
+- Both corrections work with the existing Brain without retraining. Reinstall
+  and rerun migration from the original addon into a fresh output directory.
+
 This is the **v1.0.6 Fixed** installer build. Reinstall it even if the version
 shown on your machine is already 1.0.6. Updated checksums identify the fixed files.
 
@@ -46,7 +57,7 @@ shown on your machine is already 1.0.6. Updated checksums identify the fixed fil
 - Existing settings-layout, search-view, attrs, addon identity and folder-scan
   corrections remain included.
 
-All **369 application tests passed on each platform**. Installer startup/removal,
+All **415 application tests passed on each platform**. Installer startup/removal,
 bundled Brain integrity and the packaged runtime modules were checked. Training
 regressions passed 220 tests. Actual Odoo install-corpus validation was NOT_RUN.
 
