@@ -1,5 +1,15 @@
 # Odoo Addon Migrator v1.0.6 Fixed - Ubuntu x86_64
 
+Latest correction: list-column visibility and modern form chatter.
+
+- Legacy list-field invisible becomes column_invisible at 16->17 when its target
+  and constant/context-only expression are proven; row-dependent conditions and
+  unknown/conflicting inherited selectors remain for review.
+- Complete standard chatter blocks become <chatter/> at 17->18. Custom options,
+  content, visibility, partial blocks and old chatter XPath anchors remain for review.
+- Both fixes work with the current trained Brain without retraining, including
+  composed upgrades from Odoo 15/16 to 19. Original addons remain unchanged.
+
 This **v1.0.6 Fixed** build corrects addon-folder naming review and Windows
 staging permissions. The application/package version remains 1.0.6.
 
@@ -47,6 +57,6 @@ odoo-addon-migrator
 
 Independent utility, not affiliated with Odoo S.A. Earlier release notes remain in the public repository.
 
-Validation: 369 application tests passed on this platform; installed startup/removal and frozen fix regressions passed.
+Validation: 415 application tests passed on this platform; installed startup/removal and frozen fix regressions passed.
 
-SHA256 (`OdooAddonMigrator_1.0.6_amd64.deb`): `e77cd105c612cd8478fe0fe3eaf9ae995fcfa35de00da2cea415deb5ae05821c`
+SHA256 (`OdooAddonMigrator_1.0.6_amd64.deb`): `20f6d4daac3aaf0ecda1764014ee0a98eba66f8d7eededbc2f1b0c270c49741a`
