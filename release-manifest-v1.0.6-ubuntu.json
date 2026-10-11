@@ -1,7 +1,7 @@
 {
-  "application_source_commit": "7b6ca20935113bdef236f6a2b372432560486520",
+  "application_source_commit": "ac3d29c1017410fd7c23a5acf4303ed58f4556fb",
   "asset_sha256": {
-    "OdooAddonMigrator_1.0.6_amd64.deb": "20f6d4daac3aaf0ecda1764014ee0a98eba66f8d7eededbc2f1b0c270c49741a"
+    "OdooAddonMigrator_1.0.6_amd64.deb": "cb7c2d5987d56ed2671d5e27f5a0f8d462179dd603aa68c8c3df67a826b2692c"
   },
   "community_brain": {
     "anchor_transitions": 84699,
@@ -176,10 +176,10 @@
       }
     }
   },
-  "created_at": "2026-10-11T06:56:51.253605+00:00",
+  "created_at": "2026-10-11T07:07:10.780488+00:00",
   "enterprise_overlay_included": false,
   "installer_only": true,
-  "installer_source_commit": "7b6ca20935113bdef236f6a2b372432560486520",
+  "installer_source_commit": "ac3d29c1017410fd7c23a5acf4303ed58f4556fb",
   "platform": "ubuntu-22.04-amd64",
   "release_build_revision": "view-visibility-and-chatter-fix",
   "release_label": "v1.0.6 Fixed",
@@ -191,6 +191,7 @@
     "frozen_fix_regressions": {
       "column_visibility_static_and_context": "passed",
       "community_hash_verified": true,
+      "descendant_xpath_abstention": "passed",
       "enterprise_overlay_included": false,
       "frozen_copy_regression": "passed",
       "frozen_view_rules": "passed",
@@ -206,7 +207,7 @@
     },
     "full_suite": {
       "failed": 0,
-      "passed": 415,
+      "passed": 416,
       "skipped": 0
     },
     "installer_acceptance": {
@@ -225,6 +226,6 @@
       "skipped": 0
     }
   },
-  "validation_source_snapshot_commit": "8e2b4e981260100fd381593d60c992002676009d",
+  "validation_source_snapshot_commit": "ad957fc55e9f14751015f2ad7f2e354ccc2827ae",
   "version": "1.0.6"
 }

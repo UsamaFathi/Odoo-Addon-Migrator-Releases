@@ -57,7 +57,7 @@ shown on your machine is already 1.0.6. Updated checksums identify the fixed fil
 - Existing settings-layout, search-view, attrs, addon identity and folder-scan
   corrections remain included.
 
-All **415 application tests passed on each platform**. Installer startup/removal,
+All **416 application tests passed on each platform**. Installer startup/removal,
 bundled Brain integrity and the packaged runtime modules were checked. Training
 regressions passed 220 tests. Actual Odoo install-corpus validation was NOT_RUN.
 

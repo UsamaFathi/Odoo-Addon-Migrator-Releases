@@ -64,6 +64,6 @@ Odoo install-corpus validation was NOT_RUN during training.
 Installer-only release: no portable ZIP. Independent utility, not affiliated
 with Odoo S.A. Earlier release notes remain in the public repository.
 
-Validation: 415 application tests passed on this platform; installed startup/removal and frozen fix regressions passed.
+Validation: 416 application tests passed on this platform; installed startup/removal and frozen fix regressions passed.
 
-SHA256 (`OdooAddonMigrator_Setup.exe`): `6649cc1a648465a6e5ef7600ff594f3409abb8f66db6f5080c1415959dfc06af`
+SHA256 (`OdooAddonMigrator_Setup.exe`): `8a8df4018065e4429d896db1736d9d87632cd1c25d172869a1fb89e66930f2ab`

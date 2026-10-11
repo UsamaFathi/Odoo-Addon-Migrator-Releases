@@ -57,6 +57,6 @@ odoo-addon-migrator
 
 Independent utility, not affiliated with Odoo S.A. Earlier release notes remain in the public repository.
 
-Validation: 415 application tests passed on this platform; installed startup/removal and frozen fix regressions passed.
+Validation: 416 application tests passed on this platform; installed startup/removal and frozen fix regressions passed.
 
-SHA256 (`OdooAddonMigrator_1.0.6_amd64.deb`): `20f6d4daac3aaf0ecda1764014ee0a98eba66f8d7eededbc2f1b0c270c49741a`
+SHA256 (`OdooAddonMigrator_1.0.6_amd64.deb`): `cb7c2d5987d56ed2671d5e27f5a0f8d462179dd603aa68c8c3df67a826b2692c`
