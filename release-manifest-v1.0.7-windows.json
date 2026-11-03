@@ -192,6 +192,17 @@
   "enterprise_overlay_included": false,
   "installer_source_commit": "eb568fa2ae918a8f4ac341a32993f3d093f539ba",
   "platform": "windows-x86_64",
+  "public_download_verification": {
+    "anonymous_download": "passed",
+    "asset_count": 1,
+    "bytes": 47300645,
+    "installer_only": true,
+    "sha256": "12a05e4e3de821aa1f124603b66a9deb135713cadeafaed49158cdec924cbc55",
+    "url": "https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/download/v1.0.7-windows/OdooAddonMigrator_Setup.exe"
+  },
+  "published_at": "2026-11-03T18:48:57Z",
+  "release_id": 433086612,
+  "release_url": "https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.7-windows",
   "source_archive_sha256": "864f4afdc1fe046ce3f477887b9052a624cdd831dd3ff4bfe01f9bf1df416de7",
   "validation": {
     "frozen_payload_regressions": {
