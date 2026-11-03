@@ -1,106 +1,58 @@
-# Odoo Addon Migrator â€” Releases
+# Odoo Addon Migrator
 
-Public desktop releases for Odoo Addon Migrator, an independent migration utility
-for custom addons across **Odoo 14 â†’ 15 â†’ 16 â†’ 17 â†’ 18 â†’ 19**.
+Desktop migration assistant for custom Odoo addons, supporting forward upgrades along Odoo 14 -> 15 -> 16 -> 17 -> 18 -> 19.
 
-## Download v1.0.6 Fixed
+## Download v1.0.7
 
-- **[Windows installer](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/download/v1.0.6-windows/OdooAddonMigrator_Setup.exe)**
-- **[Ubuntu x86_64 installer](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/download/v1.0.6-ubuntu/OdooAddonMigrator_1.0.6_amd64.deb)**
+| Platform | Installer | Tested environment |
+|---|---|---|
+| Windows x86_64 | [Download Windows installer](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/download/v1.0.7-windows/OdooAddonMigrator_Setup.exe) | Windows, Python 3.12 bundled |
+| Ubuntu x86_64 | [Download Debian installer](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/download/v1.0.7-ubuntu/OdooAddonMigrator_1.0.7_amd64.deb) | Ubuntu 22.04.5 LTS |
 
-[Windows release](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.6-windows)
-Â· [Ubuntu release](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/tag/v1.0.6-ubuntu)
+Each release has one installer asset. No portable ZIP or tarball is published. Existing 1.0.6 releases remain available in [release history](https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases).
 
-**v1.0.6 is installer-only.** No portable ZIP or tarball is published. Close the
-application before installing the Windows update. The Windows installer also
-retires stale application package metadata from previous versions.
+## Changes in 1.0.7
+
+- Newly trained, source-free schema-v6 Community Brain.
+- 85 guarded review cases, 43 contextual mappings and 35 POS method suggestions.
+- Conservative import/API, aggregation metadata, explicit view type, unlimited cron, plain kanban and route-declaration corrections.
+- Structural view evolution and XPath risk analysis, with ambiguous suggestions kept for review.
+- Semantic safeguards for HR redesigns, effective group membership, manual stock descriptions and business-specific POS changes.
+- Includes earlier folder handling, Python tree/list actions, settings views, column visibility and chatter fixes.
+
+The 85 report cases are review knowledge, not 85 automatic business-logic ports. The tool preserves the original addon tree and writes a separate output with a report and diff.
+
+## Install and use
+
+Windows: run the setup executable, launch the application, select the original addons folder and the actual source/target versions, then migrate into a separate destination. Keep the complete installed application directory intact.
+
+Ubuntu:
 
 ```bash
-sudo apt install ./OdooAddonMigrator_1.0.6_amd64.deb
+sudo apt install ./OdooAddonMigrator_1.0.7_amd64.deb
 odoo-addon-migrator
 ```
 
-Ubuntu was validated on 22.04.5 x86_64, including installed offscreen/X11 startup
-and removal. SSSE3, SSE4.1, SSE4.2 and POPCNT CPU support is required by bundled Qt.
-8 GB RAM is recommended; earlier acceptance required a 4 GB VM. Startup loads and
-verifies the Brain and can take time. Windows acceptance used an isolated test
-installation and preserved the existing user installation.
+End users do not need Python, official Odoo sources, training setup or CUDA. Public installers contain only Community-derived facts/model parameters. Enterprise overlays, raw Odoo source, customer addons and training caches are not redistributed.
 
-## What changed
+## Validation and limits
 
-The latest **v1.0.6 Fixed** installers also correct list-column visibility and
-standard form chatter:
+Windows: 522 application tests passed, plus compiled-payload regressions and isolated installer install/startup/removal. The acceptance installation preserved the existing user installation.
 
-- At 16->17, proven static/context-only list-field visibility becomes
-  `column_invisible`; record-dependent conditions and ambiguous selectors stay
-  for review.
-- At 17->18, complete standard chatter blocks become `<chatter/>`. Custom content,
-  options and old chatter XPath anchors remain for review.
-- Both corrections work with the existing Brain without retraining. Reinstall
-  and rerun migration from the original addon into a fresh output directory.
+Ubuntu: 521 application tests passed, one private-bundle test skipped in the sanitized Community-only source snapshot, zero failures. Debian install, offscreen and X11 startup, compiled-payload regressions and removal passed.
 
-This is the **v1.0.6 Fixed** installer build. Reinstall it even if the version
-shown on your machine is already 1.0.6. Updated checksums identify the fixed files.
+The public Community runtime passed source-free migration smoke tests with original input preservation; the expected removed-model blocker was also verified. Owner training regressions: 373 passed. Detailed source commits, fingerprints, metrics, installer checks and SHA256 values are recorded in the platform manifests.
 
-- Migrated copies exclude Git metadata and make copied read-only files writable,
-  fixing Windows staging-directory permission failures.
-- Invalid addon folder names now open an explicit technical-name review; original
-  folders and references are preserved.
-- Expanded error details now include full tracebacks and operation stages.
+Static validation and canonical source knowledge do not prove an actual database's effective views or business compatibility. The customer Odoo install/workflow corpus was NOT_RUN. Test the migrated addon in the target Odoo environment before production. View retrieval metrics use retained-field identity proxies; they do not establish replacement precision for removed fields. The five-group 18-to-19 method holdout is small and does not establish universal rename coverage.
 
-- Python window-action `tree` view types now become `list` at the 17â†’18 step,
-  including composed upgrades to Odoo 19.
-- Model-proven method references have broader coverage; unknown aliases,
-  dynamic references, private RPC targets and behavior changes remain for review.
-- Newly trained schema-v5 Community Brain: 210,564 examples, 17,319 view profiles
-  and 84,699 anchor transitions.
-- Existing settings-layout, search-view, attrs, addon identity and folder-scan
-  corrections remain included.
+## Checksums and details
 
-All **416 application tests passed on each platform**. Installer startup/removal,
-bundled Brain integrity and the packaged runtime modules were checked. Training
-regressions passed 220 tests. Actual Odoo install-corpus validation was NOT_RUN.
-
-Python rename calibration is deliberately conservative and small: 7 accepted
-decisions from 29 trusted held-out groups, with zero observed false suggestions
-and 24.14% coverage. The 18â†’19 slice accepted 1 of 5. Git-history supervision was
-not enabled in this run. These figures do not establish support for every method
-rename or business-runtime compatibility. See the platform release notes and
-manifests for validation details.
-
-## Normal use
-
-1. Select your custom addon or containing addons directory.
-2. Choose its actual original Odoo version and the higher target version.
-3. Choose a fresh, separate output directory and start migration.
-4. Confirm the intended technical addon name if prompted.
-5. Review the report/diff and test the migrated addon in target Odoo.
-
-Single-addon output contains a named addon folder; use its parent as the addons
-path. The original addon tree is not modified. End users do not need Python,
-official Odoo sources, training setup or CUDA to run the desktop tool.
-
-Public packages contain **Community-derived knowledge only**. Enterprise overlays
-remain separate, local-authorized artifacts and are not distributed. Packs contain
-derived facts/model parameters, not raw Odoo source files. View suggestions are
-review-only; canonical source support does not prove effective database views.
-
-## Checksums and history
-
-[SHA256 checksums](SHA256SUMS-v1.0.6.txt) Â·
-[Windows notes](RELEASE_NOTES_v1.0.6.md) Â·
-[Ubuntu notes](RELEASE_NOTES_v1.0.6_UBUNTU.md)
-
-Historical [Windows v1.0.5 notes](RELEASE_NOTES_v1.0.5.md) and
-[Ubuntu v1.0.5 notes](RELEASE_NOTES_v1.0.5_UBUNTU.md) remain in this repository.
+- [SHA256 checksums](SHA256SUMS-v1.0.7.txt)
+- [Windows release notes](RELEASE_NOTES_v1.0.7.md) and [manifest](release-manifest-v1.0.7-windows.json)
+- [Ubuntu release notes](RELEASE_NOTES_v1.0.7_UBUNTU.md) and [manifest](release-manifest-v1.0.7-ubuntu.json)
 
 ## Feedback
 
-Use Issues for bug reports or product feedback. Do not post credentials, customer
-data, proprietary addon source, Enterprise source or private logs publicly.
-Static validation is not production compatibility proof; install-test and exercise
-business actions before deployment. The Windows installer may be unsigned and
-Microsoft SmartScreen may display a warning.
+Use Issues for bug reports. Do not post credentials, customer data, proprietary source, Enterprise files or private logs publicly. The Windows installer may be unsigned and Microsoft SmartScreen may display a warning.
 
-This repository contains public release files and feedback resources. Application
-development is maintained separately. Not affiliated with Odoo S.A.
+This repository distributes public installers and documentation. The application source repository is private.

@@ -1,0 +1,262 @@
+{
+  "application_source_commit": "eb568fa2ae918a8f4ac341a32993f3d093f539ba",
+  "asset_sha256": {
+    "OdooAddonMigrator_1.0.7_amd64.deb": "d5600a3b1d1b754adbde3b1c4a24d2a6676935b9afb8ca39a75ec87952dc0231"
+  },
+  "asset_sizes": {
+    "OdooAddonMigrator_1.0.7_amd64.deb": 60487766
+  },
+  "case_review_corpus": {
+    "cases": 85,
+    "catalog_sha256": "16a359a15936fd663ea15d78d50f1b345786e0109af227351d7d19f534a877b3",
+    "evaluation": "contextual_review_seeds_not_accuracy_benchmark",
+    "mappings": 43,
+    "pos_method_suggestions": 35
+  },
+  "community_brain": {
+    "anchor_transitions": 84699,
+    "distribution_policy": "public_community",
+    "fingerprint": "876295ddc9555a87af59bf45a7d83f166e3040e7467b84bc1b3b09d4f35fdeb9",
+    "python_rename_holdout": {
+      "14_to_15": {
+        "abstained": 3,
+        "correct_auto_fixes": 2,
+        "coverage": 0.4,
+        "decisions": 2,
+        "evaluation_kind": "trusted_rename_full_candidate_holdout",
+        "false_auto_fix_rate": 0.0,
+        "false_auto_fixes": 0,
+        "groups": 5,
+        "margin": 0.2,
+        "precision": 1.0,
+        "recall": 0.4,
+        "runtime_compatibility_proven": false,
+        "status": "MEASURED",
+        "threshold": 0.8,
+        "top_1_accuracy": 1.0
+      },
+      "15_to_16": {
+        "abstained": 6,
+        "correct_auto_fixes": 2,
+        "coverage": 0.25,
+        "decisions": 2,
+        "evaluation_kind": "trusted_rename_full_candidate_holdout",
+        "false_auto_fix_rate": 0.0,
+        "false_auto_fixes": 0,
+        "groups": 8,
+        "margin": 0.2,
+        "precision": 1.0,
+        "recall": 0.25,
+        "runtime_compatibility_proven": false,
+        "status": "MEASURED",
+        "threshold": 0.8,
+        "top_1_accuracy": 1.0
+      },
+      "16_to_17": {
+        "abstained": 6,
+        "correct_auto_fixes": 2,
+        "coverage": 0.25,
+        "decisions": 2,
+        "evaluation_kind": "trusted_rename_full_candidate_holdout",
+        "false_auto_fix_rate": 0.0,
+        "false_auto_fixes": 0,
+        "groups": 8,
+        "margin": 0.2,
+        "precision": 1.0,
+        "recall": 0.25,
+        "runtime_compatibility_proven": false,
+        "status": "MEASURED",
+        "threshold": 0.8,
+        "top_1_accuracy": 1.0
+      },
+      "17_to_18": {
+        "abstained": 3,
+        "correct_auto_fixes": 0,
+        "coverage": 0.0,
+        "decisions": 0,
+        "evaluation_kind": "trusted_rename_full_candidate_holdout",
+        "false_auto_fix_rate": 0.0,
+        "false_auto_fixes": 0,
+        "groups": 3,
+        "margin": 0.2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "runtime_compatibility_proven": false,
+        "status": "MEASURED",
+        "threshold": 0.8,
+        "top_1_accuracy": 1.0
+      },
+      "18_to_19": {
+        "abstained": 4,
+        "correct_auto_fixes": 1,
+        "coverage": 0.2,
+        "decisions": 1,
+        "evaluation_kind": "trusted_rename_full_candidate_holdout",
+        "false_auto_fix_rate": 0.0,
+        "false_auto_fixes": 0,
+        "groups": 5,
+        "margin": 0.2,
+        "precision": 1.0,
+        "recall": 0.2,
+        "runtime_compatibility_proven": false,
+        "status": "MEASURED",
+        "threshold": 0.8,
+        "top_1_accuracy": 1.0
+      }
+    },
+    "schema": 6,
+    "sha256": "db9c3ec8b1faaa6bad619b667f0070836209ab0690e03f9d1d18b0ebb5633a98",
+    "source_code_included": false,
+    "training_examples": 210564,
+    "validation_metrics": {
+      "14_to_15": {
+        "abstentions": 421,
+        "confidence_threshold": 0.9,
+        "coverage": 0.7638810992708918,
+        "decisions": 1362,
+        "evaluation_kind": "heldout_retained_identity_proxy",
+        "false_suggestion_rate": 0.0,
+        "margin_threshold": 0.15,
+        "precision": 1.0,
+        "recall": 0.7638810992708918,
+        "replacement_precision_established": false,
+        "top_1_accuracy": 0.900168255748738,
+        "total_candidate_groups": 1783,
+        "unlabelled_removed_groups": 296
+      },
+      "15_to_16": {
+        "abstentions": 514,
+        "confidence_threshold": 0.9,
+        "coverage": 0.7424849699398798,
+        "decisions": 1482,
+        "evaluation_kind": "heldout_retained_identity_proxy",
+        "false_suggestion_rate": 0.0020242914979757085,
+        "margin_threshold": 0.15,
+        "precision": 0.9979757085020243,
+        "recall": 0.7409819639278558,
+        "replacement_precision_established": false,
+        "top_1_accuracy": 0.8962925851703407,
+        "total_candidate_groups": 1996,
+        "unlabelled_removed_groups": 246
+      },
+      "16_to_17": {
+        "abstentions": 788,
+        "confidence_threshold": 0.9,
+        "coverage": 0.6375344986200552,
+        "decisions": 1386,
+        "evaluation_kind": "heldout_retained_identity_proxy",
+        "false_suggestion_rate": 0.0007215007215007215,
+        "margin_threshold": 0.15,
+        "precision": 0.9992784992784993,
+        "recall": 0.6370745170193193,
+        "replacement_precision_established": false,
+        "top_1_accuracy": 0.8845446182152714,
+        "total_candidate_groups": 2174,
+        "unlabelled_removed_groups": 412
+      },
+      "17_to_18": {
+        "abstentions": 622,
+        "confidence_threshold": 0.9,
+        "coverage": 0.7345283824157064,
+        "decisions": 1721,
+        "evaluation_kind": "heldout_retained_identity_proxy",
+        "false_suggestion_rate": 0.0005810575246949448,
+        "margin_threshold": 0.15,
+        "precision": 0.999418942475305,
+        "recall": 0.7341015791720017,
+        "replacement_precision_established": false,
+        "top_1_accuracy": 0.8864703371745625,
+        "total_candidate_groups": 2343,
+        "unlabelled_removed_groups": 689
+      },
+      "18_to_19": {
+        "abstentions": 523,
+        "confidence_threshold": 0.9,
+        "coverage": 0.7732003469210754,
+        "decisions": 1783,
+        "evaluation_kind": "heldout_retained_identity_proxy",
+        "false_suggestion_rate": 0.0011217049915872126,
+        "margin_threshold": 0.15,
+        "precision": 0.9988782950084127,
+        "recall": 0.7723330442324371,
+        "replacement_precision_established": false,
+        "top_1_accuracy": 0.9080659150043365,
+        "total_candidate_groups": 2306,
+        "unlabelled_removed_groups": 520
+      }
+    },
+    "view_transitions": 17319
+  },
+  "created_at": "2026-11-03T18:42:17.592847+00:00",
+  "effective_database_compatibility_validated": false,
+  "enterprise_overlay_included": false,
+  "installer_source_commit": "eb568fa2ae918a8f4ac341a32993f3d093f539ba",
+  "platform": "ubuntu-x86_64",
+  "source_archive_sha256": "864f4afdc1fe046ce3f477887b9052a624cdd831dd3ff4bfe01f9bf1df416de7",
+  "toolchain": {
+    "os": "Ubuntu 22.04.5 LTS",
+    "pyinstaller": "6.22.3",
+    "python": "3.10.12"
+  },
+  "validation": {
+    "frozen_payload_regressions": {
+      "column_visibility_static_and_context": "passed",
+      "community_hash_verified": true,
+      "descendant_xpath_abstention": "passed",
+      "enterprise_overlay_included": false,
+      "frozen_case_catalog": 85,
+      "frozen_copy_regression": "passed",
+      "frozen_reported_compatibility": "passed",
+      "frozen_view_rules": "passed",
+      "git_excluded": "passed",
+      "input_unchanged": true,
+      "invalid_name_review_metadata": "passed",
+      "nested_list_scope": "passed",
+      "old_brain_allowlist_verified": true,
+      "read_only_copy_writable": "passed",
+      "row_visibility_abstention": "passed",
+      "staging_final_rename": "passed",
+      "standard_chatter_conversion": "passed"
+    },
+    "full_suite": {
+      "failed": 0,
+      "passed": 521,
+      "skip_reason": "Private release Brain bundle intentionally absent from sanitized Community-only build snapshot.",
+      "skipped": 1
+    },
+    "installer_acceptance": {
+      "community_hash_verified": true,
+      "debian_install": "passed",
+      "enterprise_overlay_included": false,
+      "installed_offscreen_smoke": "passed",
+      "installed_payload_hash_verified": true,
+      "installed_x11_smoke": "passed",
+      "uninstall": "passed"
+    },
+    "isolated_odoo_install_corpus": {
+      "failed": 0,
+      "passed": 0,
+      "reason": "No explicit local install corpus configured.",
+      "status": "NOT_RUN"
+    },
+    "owner_training_regressions": 373,
+    "public_community_source_free_smoke": {
+      "effective_view_validated": false,
+      "input_unchanged": true,
+      "path": "15->16->17->18->19",
+      "positive_validation_state": "passed",
+      "removed_model_negative": {
+        "code": "brain.model.removed",
+        "expected_state": "blocked",
+        "input_unchanged": true,
+        "object": "hr.contract",
+        "status": "passed"
+      },
+      "review_findings": 4,
+      "source_code_indexed_at_runtime": false
+    }
+  },
+  "validation_source_snapshot_commit": "ff56be9728ad08b05dccd6a6f0b14e5bd386f4d8",
+  "version": "1.0.7",
+  "view_anchor_suggestions": "review_only"
+}
