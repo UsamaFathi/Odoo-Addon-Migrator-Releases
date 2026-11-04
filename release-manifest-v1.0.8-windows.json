@@ -1,4 +1,12 @@
 {
+  "anonymous_download_verification": {
+    "anonymous_download": "passed",
+    "asset_count": 1,
+    "bytes": 50829713,
+    "installer_only": true,
+    "sha256": "e99edffa76e8885909fdc66a85713fca9aa651335e281cceac76fd61e5ace520",
+    "url": "https://github.com/UsamaFathi/Odoo-Addon-Migrator-Releases/releases/download/v1.0.8-windows/OdooAddonMigrator_Setup.exe"
+  },
   "application_source_commit": "9f4396c54156d8c850ca84bf1030aa0e8ff53a1d",
   "application_tests": {
     "errors": 0,

@@ -38,7 +38,7 @@ End users do not need Python, official Odoo sources, training setup or CUDA. Pub
 
 Windows and Ubuntu: **586 application tests passed on each platform**, zero failures or skips. Compiled-payload regressions and installer install/startup/removal passed; Windows acceptance preserved the existing user installation. Ubuntu startup passed both offscreen and X11 checks.
 
-The Community-only runtime passed source-free migration smoke tests with original input preservation and an expected removed-model blocker. Owner training regressions: **443 passed**. Schema 7 contains 210,564 examples, 17,319 view transitions and 84,699 anchor transitions. Source commits, fingerprints, measured metrics and installer SHA256 values are in the platform manifests.
+The Community-only runtime passed source-free migration smoke tests with original input preservation and an expected removed-model blocker. Owner training regressions: **443 passed**. Schema 7 contains 210,564 examples, 17,319 view transitions and 84,699 anchor transitions. Source commits, fingerprints, measured metrics and installer SHA256 values are in the platform manifests. Full anonymous downloads of both installers matched the validated local SHA256 values.
 
 Static validation and canonical source knowledge do not prove an actual database's effective views or business compatibility. The customer Odoo install/workflow corpus was NOT_RUN. Test the migrated addon in the target Odoo environment before production. View retrieval metrics use retained-field identity proxies; they do not establish replacement precision for removed fields. The five-group 18-to-19 method holdout is small and does not establish universal rename coverage.
 
